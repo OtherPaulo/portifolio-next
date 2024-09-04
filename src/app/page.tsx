@@ -7,17 +7,20 @@ import { Home } from "@/components/home/_components/home"
 import { useTheme } from "next-themes"
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from "@/components/ui/dropdown-menu"
 import { MoonIcon, SunIcon } from "@radix-ui/react-icons";
+import { Sobre } from "@/components/sobre/_components/sobre"
+import Empresas from "@/components/empresas/_components/empresas"
 
 export default function Component() {
   const { setTheme } = useTheme();
+  const words = ["FullStack", "WEB", "Freelancer"];
   return (
     <>
     <header className="flex h-20 w-full items-center justify-between px-4 md:px-6">
       <Link href="#" className="flex items-center gap-2 text-lg font-bold" prefetch={false}>
         <span>Paulo Dev</span>
       </Link>
-      <nav className="hidden space-x-4 lg:flex">
-        <Link href="#" className="text-sm font-medium hover:underline underline-offset-4" prefetch={false}>
+      <nav className="hidden lg:flex max-w-fit fixed inset-x-0 mx-auto border border-transparent dark:border-white/[0.2] rounded-full dark:bg-black bg-white shadow-[0px_2px_3px_-1px_rgba(0,0,0,0.1),0px_1px_0px_0px_rgba(25,28,33,0.02),0px_0px_0px_1px_rgba(25,28,33,0.08)] z-[5000] pr-2 pl-8 py-2 items-center justify-center space-x-4">
+      <Link href="#" className="text-sm font-medium hover:underline underline-offset-4" prefetch={false}>
           Início
         </Link>
         <Link href="#" className="text-sm font-medium hover:underline underline-offset-4" prefetch={false}>
@@ -26,9 +29,10 @@ export default function Component() {
         <Link href="#" className="text-sm font-medium hover:underline underline-offset-4" prefetch={false}>
           Projetos
         </Link>
-        <Link href="#" className="text-sm font-medium hover:underline underline-offset-4" prefetch={false}>
-          Contato
-        </Link>
+        <button className="border text-sm font-medium relative border-neutral-200 dark:border-white/[0.2] text-black dark:text-white px-4 py-2 rounded-full">
+          <span>Contato</span>
+          <span className="absolute inset-x-0 w-1/2 mx-auto -bottom-px bg-gradient-to-r from-transparent via-blue-500 to-transparent  h-px" />
+        </button>
       </nav>
       <div className="hidden md:flex items-center">
       <DropdownMenu>
@@ -84,6 +88,8 @@ export default function Component() {
       </Sheet>
     </header>
     <Home />
+    <Sobre />
+    <Empresas />
     </>
   )
 }
