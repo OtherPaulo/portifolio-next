@@ -1,4 +1,5 @@
 "use client";
+import { BackgroundGradient } from "@/components/ui/background-gradient";
 import { LinkPreview } from "@/components/ui/link-preview";
 import Image from "next/image";
 
@@ -30,6 +31,7 @@ export function Sobre() {
             </p>
           </div>
           <div className="w-full md:w-1/2 order-1 md:order-2 flex justify-center">
+          <BackgroundGradient className="rounded-[22px] bg-white dark:bg-zinc-900">
             <Image
               src="/working.png?height=300&width=300"
               alt="Imagem ilustrativa"
@@ -37,6 +39,7 @@ export function Sobre() {
               height={300}
               className="rounded-lg shadow-lg"
             />
+            </BackgroundGradient>
           </div>
         </div>
       </div>
