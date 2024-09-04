@@ -78,7 +78,7 @@ export default function Component() {
                     <span className="sr-only">Theme</span>
                   </Button>
                 </DropdownMenuTrigger>
-                <DropdownMenuContent align="end">
+                <DropdownMenuContent align="end" className="z-[10000]">
                   <DropdownMenuItem onClick={() => setTheme("light")}>Light</DropdownMenuItem>
                   <DropdownMenuItem onClick={() => setTheme("dark")}>Dark</DropdownMenuItem>
                 </DropdownMenuContent>
