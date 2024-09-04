@@ -74,9 +74,9 @@ export default function Empresas() {
           {Array(duplicates).fill(companies).flat().map((company, index) => (
             <div
               key={index}
-              className="inline-flex items-center justify-center mx-4 w-48 h-24 rounded-lg shadow-md flex-shrink-0"
+              className="inline-flex items-center justify-center  w-48 h-24 flex-shrink-0"
             >
-              <span className="text-lg font-semibold text-gray-800 dark:text-gray-200 text-center px-2">
+              <span className="text-lg font-semibold text-center px-2">
                 {company}
               </span>
             </div>
