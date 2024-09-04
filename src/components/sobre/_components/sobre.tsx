@@ -5,7 +5,7 @@ import Image from "next/image";
 
 export function Sobre() {
   return (
-      <div className="flex justify-center items-center min-h-[16rem] px-4 md:px-12 z-[9999] relative mb-12">
+      <div className="flex justify-center items-center min-h-[16rem] px-6 md:px-12 z-[9999] relative mb-12">
         <div className="flex flex-col md:flex-row items-center max-w-6xl w-full gap-8">
           <div className="w-full md:w-1/2 order-2 md:order-1">
             <p className="text-neutral-500 dark:text-neutral-400 text-lg md:text-xl max-w-3xl mx-auto mb-6">

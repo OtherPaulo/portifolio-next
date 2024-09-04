@@ -15,7 +15,7 @@ export default function Component() {
 
   return (
     <>
-      <header className="flex h-20 w-full items-center justify-between px-4 md:px-6">
+      <header className="flex h-20 w-full items-center justify-between px-8 md:px-20">
         <Link href="#" className="flex items-center gap-2 text-lg font-bold" prefetch={false}>
           <span>Paulo Dev</span>
         </Link>
