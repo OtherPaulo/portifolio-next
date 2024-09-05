@@ -61,13 +61,13 @@ export default function Empresas() {
     }, [controls, duplicates]);
 
   return (
-    <section className="w-full overflow-hidden py-12">
+    <section id="servicos" className="w-full overflow-hidden pb-12">
       <div className="mb-8 text-center">
         <h2 className="text-2xl md:text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-b from-neutral-800 via-neutral-700 to-neutral-700 dark:from-neutral-800 dark:via-white dark:to-white">
           Serviços Prestados:
         </h2>
       </div>
-      <div className="relative w-full overflow-hidden" ref={containerRef}>
+      <div className="relative w-full mx-auto overflow-hidden" ref={containerRef}>
         <motion.div
           className="flex whitespace-nowrap"
           animate={controls}

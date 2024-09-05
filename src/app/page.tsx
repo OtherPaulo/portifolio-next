@@ -15,7 +15,7 @@ export default function Component() {
 
   return (
     <>
-      <header className="flex h-20 w-full items-center justify-between px-8 md:px-20">
+      <header className="flex h-20 w-4/5 mx-auto items-center justify-between">
         <Link href="#" className="flex items-center gap-2 text-lg font-bold" prefetch={false}>
           <span>Paulo Dev</span>
         </Link>
@@ -23,8 +23,8 @@ export default function Component() {
           <Link href="#" className="text-sm font-medium hover:underline underline-offset-4" prefetch={false}>
             Início
           </Link>
-          <Link href="#" className="text-sm font-medium hover:underline underline-offset-4" prefetch={false}>
-            Sobre
+          <Link href="#servicos" className="text-sm font-medium hover:underline underline-offset-4" prefetch={false}>
+            Serviços
           </Link>
           <Link href="#" className="text-sm font-medium hover:underline underline-offset-4" prefetch={false}>
             Projetos
@@ -61,8 +61,8 @@ export default function Component() {
               <Link href="#" className="flex items-center gap-2 text-lg font-medium" prefetch={false}>
                 Início
               </Link>
-              <Link href="#" className="flex items-center gap-2 text-lg font-medium" prefetch={false}>
-                Sobre
+              <Link href="#servicos" className="flex items-center gap-2 text-lg font-medium" prefetch={false}>
+              Serviços
               </Link>
               <Link href="#" className="flex items-center gap-2 text-lg font-medium" prefetch={false}>
                 Projetos
