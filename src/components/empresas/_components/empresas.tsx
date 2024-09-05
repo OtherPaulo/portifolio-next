@@ -2,6 +2,7 @@
 
 import React, { useEffect, useRef, useState } from "react"
 import { motion, useAnimationControls } from "framer-motion"
+import { BackgroundEmpresas } from "@/components/ui/backgroun-empresas";
 
 const companies = [
     "Encaixa.ai",
@@ -63,7 +64,7 @@ export default function Empresas() {
     <section className="w-full overflow-hidden py-12">
       <div className="mb-8 text-center">
         <h2 className="text-2xl md:text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-b from-neutral-800 via-neutral-700 to-neutral-700 dark:from-neutral-800 dark:via-white dark:to-white">
-          Serviços Prestados Em:
+          Serviços Prestados:
         </h2>
       </div>
       <div className="relative w-full overflow-hidden" ref={containerRef}>
@@ -74,11 +75,13 @@ export default function Empresas() {
           {Array(duplicates).fill(companies).flat().map((company, index) => (
             <div
               key={index}
-              className="inline-flex items-center justify-center w-48 h-12 flex-shrink-0"
+              className="inline-flex items-center justify-center w-34 h-8 flex-shrink-0"
             >
-              <span className="text-lg font-semibold text-center px-2">
+            <BackgroundEmpresas className="">
+              <span className="flex justify-center items-center px-8">
                 {company}
               </span>
+            </BackgroundEmpresas>
             </div>
           ))}
         </motion.div>

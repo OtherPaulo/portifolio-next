@@ -23,7 +23,7 @@ export function Sobre() {
               Visite meu{" "}
               <LinkPreview
                 url="https://paulorodrigues.tech"
-                className="font-bold bg-clip-text text-transparent bg-gradient-to-br from-purple-500 to-pink-500"
+                className="font-bold"
               >
                 Link-Bio
               </LinkPreview>{" "}
