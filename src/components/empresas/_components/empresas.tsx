@@ -61,7 +61,7 @@ export default function Empresas() {
     }, [controls, duplicates]);
 
   return (
-    <section id="servicos" className="w-full overflow-hidden pb-12">
+    <section id="servicos" className="w-full overflow-hidden">
       <div className="mb-8 text-center">
         <h2 className="text-2xl md:text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-b from-neutral-800 via-neutral-700 to-neutral-700 dark:from-neutral-800 dark:via-white dark:to-white">
           Serviços Prestados:
