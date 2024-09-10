@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react'
 import { X, Send } from 'lucide-react'
 
-export default function Component() {
+export default function Chat() {
   const [isOpen, setIsOpen] = useState(false)
   const [message, setMessage] = useState('')
   const [currentTime, setCurrentTime] = useState('')
@@ -30,9 +30,9 @@ export default function Component() {
   }
 
   return (
-    <div className="fixed bottom-4 right-4 z-50 flex flex-col items-end">
-      {isOpen && (
-        <div className="bg-white rounded-lg shadow-lg w-80 mb-4 overflow-hidden">
+<div className="fixed bottom-4 right-4 z-[10001] flex flex-col items-end pointer-events-auto">
+  {isOpen && (
+        <div className="bg-white dark:bg-gray-800 rounded-lg shadow-lg w-80 mb-4 overflow-hidden">
           <div className="bg-emerald-600 p-4 flex items-center justify-between">
             <div className="flex items-center space-x-2">
               <img
@@ -53,21 +53,29 @@ export default function Component() {
               <X className="w-6 h-6" />
             </button>
           </div>
-          <div className="h-64 overflow-y-auto p-4 bg-emerald-50">
-            <div className="bg-white-300 p-2 text-black rounded-lg shadow mb-2 max-w-[80%]">
+          <div 
+            className="h-50 overflow-y-auto p-2 bg-emerald-50 dark:bg-gray-700"
+            style={{
+              backgroundImage: `url('/bg-whatsapp.jpeg')`,
+              backgroundSize: 'cover',
+              backgroundPosition: 'center',
+            }}
+          >
+            <div className="bg-white p-2 text-white dark:text-black rounded-lg shadow mb-2 max-w-[80%]">
               <p>Olá 👋</p> <br />
               <p>O que você está precisando?</p>
-              <span className="text-xs text-gray-500">{currentTime}</span>
+              <span className="text-xs text-gray-500 dark:text-gray-400">{currentTime}</span>
             </div>
-          </div>
-          <form onSubmit={handleSubmit} className="p-4 bg-white">
+
+
+            <form onSubmit={handleSubmit} className="p-2 mt-10">
             <div className="flex items-center space-x-2">
               <input
                 type="text"
                 value={message}
                 onChange={(e) => setMessage(e.target.value)}
-                placeholder="Preciso de uma página de vendas!"
-                className="flex-grow p-2 border rounded-full focus:outline-none focus:ring-2 focus:ring-emerald-500"
+                placeholder="Quero uma página de vendas!"
+                className="flex-grow p-2 border rounded-full focus:outline-none focus:ring-2 focus:ring-emerald-500 dark:bg-white dark:text-black dark:border-gray-600"
                 aria-label="Digite sua mensagem"
               />
               <button
@@ -79,11 +87,14 @@ export default function Component() {
               </button>
             </div>
           </form>
+          </div>
+
+
         </div>
       )}
       <button
         onClick={toggleChat}
-        className="bg-emerald-500 text-white p-4 rounded-full shadow-lg hover:bg-emerald-600 focus:outline-none focus:ring-2 focus:ring-emerald-500"
+        className="bg-emerald-500 text-white p-4 rounded-full shadow-lg hover:bg-emerald-600 focus:outline-none focus:ring-2 focus:ring-emercel-500"
         aria-label={isOpen ? "Fechar chat" : "Abrir chat"}
       >
         <svg
