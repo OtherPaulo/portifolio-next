@@ -8,9 +8,10 @@ import { useTheme } from "next-themes"
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from "@/components/ui/dropdown-menu"
 import { MoonIcon, SunIcon } from "@radix-ui/react-icons"
 import { Sobre } from "@/components/sobre/_components/sobre"
-import Empresas from "@/components/empresas/_components/empresas"
 import { Servicos } from "@/components/servicos/_components/servicos"
 import Chat from "@/components/chat/_components/chat"
+import HyperText from "@/components/magicui/hyper-text"
+import { Empresas } from "@/components/empresas/_components/empresas"
 
 export default function Component() {
   const { setTheme } = useTheme()
@@ -19,7 +20,10 @@ export default function Component() {
     <>
       <header className="flex h-20 w-4/5 mx-auto items-center justify-between">
         <Link href="#" className="flex items-center gap-2 text-lg font-bold" prefetch={false}>
-          <span>Paulo Dev</span>
+        <HyperText
+      className="text-4xl bg-clip-text text-transparent bg-gradient-to-b from-neutral-800 via-neutral-700 to-neutral-700 dark:from-neutral-800 dark:via-white dark:to-white"
+      text="Paulo Dev"
+    />
         </Link>
         <nav className="hidden lg:flex max-w-fit inset-x-0 mx-auto border border-transparent dark:border-white/[0.2] rounded-full dark:bg-black bg-white shadow-[0px_2px_3px_-1px_rgba(0,0,0,0.1),0px_1px_0px_0px_rgba(25,28,33,0.02),0px_0px_0px_1px_rgba(25,28,33,0.08)] z-[9999] pr-2 pl-8 py-2 items-center justify-center space-x-4">
           <Link href="#" className="text-sm font-medium hover:underline underline-offset-4" prefetch={false}>
