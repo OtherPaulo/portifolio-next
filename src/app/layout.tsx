@@ -24,7 +24,7 @@ export const metadata: Metadata = {
     description: "Seu Desenvolvedor FullStack",
     images: [
       {
-        url: "/portifolio-paulo.jpeg",
+        url: "https://portifolio.paulorodrigues.tech/portifolio-paulo.jpeg",
         alt: "Paulo Rodrigues",
       }
     ],
