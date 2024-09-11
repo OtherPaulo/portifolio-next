@@ -5,16 +5,18 @@ import { Tabs } from "@/components/ui/tabs";
 import Safari from "@/components/magicui/safari";
 import SafariLP from "@/components/magicui/safariLp";
 import SafariLyna from "@/components/magicui/safariLyna";
+import { BorderBeam } from "@/components/magicui/border-beam";
 
 export function Servicos() {
   const tabs = [
     {
-      title: "Landing Page",
-      value: "Landing Page",
+      title: "SaaS",
+      value: "SaaS",
       content: (
         <div className="w-full overflow-hidden relative h-full rounded-2xl p-10 text-xl md:text-4xl font-bold text-white bg-[#0E0E10]">
-          <p className="mb-2">Site institucional</p>
-          <SafariLP url="Encaixa.ai" className="size-full" />
+          <p className="mb-2">Aplicação completa</p>
+          <Safari url="klirva.paulorodrigues.tech" className="size-full" />
+          <BorderBeam size={250} duration={12} delay={9} />
         </div>
       ),
     },
@@ -25,16 +27,18 @@ export function Servicos() {
         <div className="w-full overflow-hidden relative h-full rounded-2xl p-10 text-xl md:text-4xl font-bold text-white bg-[#0E0E10]">
           <p className="mb-2">Loja Virtual</p>
           <SafariLyna url="lynaesthetic.com.br" className="size-full" />
+          <BorderBeam size={250} duration={12} delay={9} />
         </div>
       ),
     },
     {
-      title: "SaaS",
-      value: "SaaS",
+      title: "Landing Page",
+      value: "Landing Page",
       content: (
         <div className="w-full overflow-hidden relative h-full rounded-2xl p-10 text-xl md:text-4xl font-bold text-white bg-[#0E0E10]">
-          <p className="mb-2">Aplicação completa</p>
-          <Safari url="klirva.paulorodrigues.tech" className="size-full" />
+          <p className="mb-2">Página de vendas/Institucional</p>
+          <SafariLP url="Encaixa.ai" className="size-full" />
+          <BorderBeam size={250} duration={12} delay={9} />
         </div>
       ),
     },
