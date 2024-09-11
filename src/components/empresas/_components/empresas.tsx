@@ -1,91 +1,95 @@
-'use client'
+import { cn } from "@/lib/utils";
+import Marquee from "@/components/magicui/marquee";
 
-import React, { useEffect, useRef, useState } from "react"
-import { motion, useAnimationControls } from "framer-motion"
-import { BackgroundEmpresas } from "@/components/ui/backgroun-empresas";
+const reviews = [
+  {
+    img: "http://localhost:3000/Charm.png",
+    url: "https://charmricordi.com/",
+    alt: "Charm",
+  },
+  {
+    img: "http://localhost:3000/Encaixa.ai.png",
+    url: "https://encaixa.ai",
+    alt: "Encaixa.ai",
+  },
+  {
+    img: "http://localhost:3000/ICTS.png",
+    url: "https://grupoicts.com.br",
+    alt: "Grupo ICTS",
+  },
+  {
+    img: "http://localhost:3000/KLIRVA.png",
+    url: "https://klirva.paulorodrigues.tech",
+    alt: "Klirva",
+  },
+  {
+    img: "http://localhost:3000/La Ganexa.png",
+    url: "https://lojalaganexa.com.br",
+    alt: "La Ganexa",
+  },
+  {
+    img: "http://localhost:3000/Maxi Made in Brazil.png",
+    url: "https://maximadeinbrazil.com",
+    alt: "Maxi Made in Brazil",
+  },
+  {
+    img: "http://localhost:3000/Lyna.png",
+    url: "https://lynaesthetic.com.br",
+    alt: "LynaEsthetic",
+  },
+];
 
-const companies = [
-    "Encaixa.ai",
-    "Klirva",
-    "La Ganexa",
-    "Charm & Ricordi",
-    "Grupo ICTS",
-    "Maxi Made in Brazil",
-]
+const firstRow = reviews.slice(0, reviews.length / 2);
+const secondRow = reviews.slice(reviews.length / 2);
 
-export default function Empresas() {
-    const controls = useAnimationControls();
-    const [duplicates, setDuplicates] = useState(2);
-    const containerRef = useRef<HTMLDivElement>(null);
-  
-    useEffect(() => {
-      const container = containerRef.current;
-      if (!container) return;
-  
-      const calculateDuplicates = () => {
-        const containerWidth = container.offsetWidth;
-        const itemWidth = 240;
-        const itemsPerScreen = Math.ceil(containerWidth / itemWidth);
-        return itemsPerScreen + 1;
-      };
-  
-      const updateDuplicates = () => {
-        setDuplicates(calculateDuplicates());
-      };
-  
-      updateDuplicates();
-      window.addEventListener('resize', updateDuplicates);
-  
-      return () => window.removeEventListener('resize', updateDuplicates);
-    }, []);
-  
-    useEffect(() => {
-      const container = containerRef.current;
-      if (!container) return;
-  
-      const animate = async () => {
-        const itemWidth = 240;
-        const moveDistance = itemWidth * companies.length;
-  
-        await controls.start({
-          x: -moveDistance,
-          transition: {
-            duration: 20,
-            ease: "linear",
-            repeat: Infinity,
-          },
-        });
-      };
-  
-      animate();
-    }, [controls, duplicates]);
+const ReviewCard = ({
+  img,
+  url,
+  alt,
+}: {
+  img: string;
+  url: string;
+  alt: string;
+}) => {
+  return (
+    <figure
+      className={cn(
+        "relative w-25 md:w-64 cursor-pointer overflow-hidden rounded-xl p-4",
+      )}
+    >
 
+      <div className="flex flex-row items-center">
+        <a href={url} target="_blank" rel="noopener noreferrer">
+          <img src={img} alt={alt} />
+        </a>
+      </div>
+    </figure>
+  );
+};
+
+export function Empresas() {
   return (
     <section id="servicos" className="w-full overflow-hidden">
-      <div className="mb-8 text-center">
-        <h2 className="text-2xl md:text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-b from-neutral-800 via-neutral-700 to-neutral-700 dark:from-neutral-800 dark:via-white dark:to-white">
-          Serviços Prestados:
-        </h2>
-      </div>
-      <div className="relative w-full mx-auto overflow-hidden" ref={containerRef}>
-        <motion.div
-          className="flex whitespace-nowrap"
-          animate={controls}
-        >
-          {Array(duplicates).fill(companies).flat().map((company, index) => (
-            <div
-              key={index}
-              className="inline-flex items-center justify-center w-34 h-8 flex-shrink-0"
-            >
-            <BackgroundEmpresas className="">
-              <span className="flex justify-center items-center px-8">
-                {company}
-              </span>
-            </BackgroundEmpresas>
-            </div>
-          ))}
-        </motion.div>
-      </div>
+    <div className="mb-2 text-center">
+    <h2 className="text-2xl md:text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-b from-neutral-800 via-neutral-700 to-neutral-700 dark:from-neutral-800 dark:via-white dark:to-white">
+      Serviços Prestados:
+    </h2>
+  </div>
+    <div className="relative flex h-[200px] w-full flex-col items-center justify-center overflow-hidden rounded-lg">
+      <Marquee pauseOnHover className="[--duration:20s]">
+        {firstRow.map((review) => (
+          <ReviewCard key={review.img} {...review} />
+        ))}
+      </Marquee>
+      <Marquee reverse pauseOnHover className="[--duration:20s]">
+        {secondRow.map((review) => (
+          <ReviewCard key={review.img} {...review} />
+        ))}
+      </Marquee>
+      <div className="pointer-events-none absolute inset-y-0 left-0 w-1/3 bg-gradient-to-r "></div>
+      <div className="pointer-events-none absolute inset-y-0 right-0 w-1/3 bg-gradient-to-l "></div>
+    </div>
     </section>
-  )
+  );
 }
+
