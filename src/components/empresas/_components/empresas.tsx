@@ -3,37 +3,37 @@ import Marquee from "@/components/magicui/marquee";
 
 const reviews = [
   {
-    img: "http://localhost:3000/Charm.png",
+    img: "https://portifolio.paulorodrigues.tech/Charm.png",
     url: "https://charmricordi.com/",
     alt: "Charm",
   },
   {
-    img: "http://localhost:3000/Encaixa.ai.png",
+    img: "https://portifolio.paulorodrigues.tech/Encaixa.ai.png",
     url: "https://encaixa.ai",
     alt: "Encaixa.ai",
   },
   {
-    img: "http://localhost:3000/ICTS.png",
+    img: "https://portifolio.paulorodrigues.tech/ICTS.png",
     url: "https://grupoicts.com.br",
     alt: "Grupo ICTS",
   },
   {
-    img: "http://localhost:3000/KLIRVA.png",
+    img: "https://portifolio.paulorodrigues.tech/KLIRVA.png",
     url: "https://klirva.paulorodrigues.tech",
     alt: "Klirva",
   },
   {
-    img: "http://localhost:3000/La Ganexa.png",
+    img: "https://portifolio.paulorodrigues.tech/La Ganexa.png",
     url: "https://lojalaganexa.com.br",
     alt: "La Ganexa",
   },
   {
-    img: "http://localhost:3000/Maxi Made in Brazil.png",
+    img: "https://portifolio.paulorodrigues.tech/Maxi Made in Brazil.png",
     url: "https://maximadeinbrazil.com",
     alt: "Maxi Made in Brazil",
   },
   {
-    img: "http://localhost:3000/Lyna.png",
+    img: "https://portifolio.paulorodrigues.tech/Lyna.png",
     url: "https://lynaesthetic.com.br",
     alt: "LynaEsthetic",
   },
