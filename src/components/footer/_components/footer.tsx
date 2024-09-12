@@ -5,22 +5,22 @@ export default function Footer() {
   const currentYear = new Date().getFullYear()
 
   return (
-    <footer className="text-white py-8">
+    <footer className="py-8">
       <div className="container mx-auto px-4">
         <div className="flex justify-center space-x-6 mb-6">
-          <a href="https://www.instagram.com/otherpaulo" target="_blank" rel="noopener noreferrer" className="hover:text-gray-400 transition-colors">
+          <a href="https://www.instagram.com/otherpaulo" target="_blank" rel="noopener noreferrer">
             <Instagram size={24} />
             <span className="sr-only">Instagram</span>
           </a>
-          <a href="https://github.com/OtherPaulo" target="_blank" rel="noopener noreferrer" className="hover:text-gray-400 transition-colors">
+          <a href="https://github.com/OtherPaulo" target="_blank" rel="noopener noreferrer">
             <Github size={24} />
             <span className="sr-only">GitHub</span>
           </a>
-          <a href="https://www.linkedin.com/in/otherpaulo" target="_blank" rel="noopener noreferrer" className="hover:text-gray-400 transition-colors">
+          <a href="https://www.linkedin.com/in/otherpaulo" target="_blank" rel="noopener noreferrer">
             <Linkedin size={24} />
             <span className="sr-only">LinkedIn</span>
           </a>
-          <a href="https://www.tiktok.com/@paulooosz" target="_blank" rel="noopener noreferrer" className="hover:text-gray-400 transition-colors">
+          <a href="https://www.tiktok.com/@paulooosz" target="_blank" rel="noopener noreferrer">
             <TikTok />
             <span className="sr-only">TikTok</span>
           </a>
@@ -36,7 +36,7 @@ export default function Footer() {
 function TikTok(props: JSX.IntrinsicAttributes & SVGProps<SVGSVGElement>) {
     return (
     <svg 
-    className="h-5 w-5" 
+    className="h-6 w-5" 
     width="24" 
     height="24" 
     viewBox="0 0 24 24" 
