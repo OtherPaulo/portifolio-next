@@ -12,7 +12,6 @@ import { Servicos } from "@/components/servicos/_components/servicos"
 import Chat from "@/components/chat/_components/chat"
 import HyperText from "@/components/magicui/hyper-text"
 import { Empresas } from "@/components/empresas/_components/empresas"
-import { Projetos } from "@/components/projetos/_components/projetos"
 import Footer from "@/components/footer/_components/footer"
 import Contato from "@/components/contato/_components/contato"
 
@@ -87,7 +86,7 @@ export default function Component() {
       <Sobre />
       <Empresas />
       <Servicos />
-      <Projetos />
+      
       <Contato />
       <Footer />
       <Chat />
