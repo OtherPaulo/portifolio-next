@@ -18,7 +18,7 @@ import {
     cta: "Ver Projeto",
     background: (
     <img
-      src="/videocommerce.jpeg" // Substitua pelo link da imagem ou caminho local
+      src="" // Substitua pelo link da imagem ou caminho local
       alt="Imagem de fundo"
       className=" opacity-60"
     />
@@ -48,7 +48,7 @@ import {
     cta: "Ver Projeto",
     background: (
     <img
-      src="/charm.jpeg" // Substitua pelo link da imagem ou caminho local
+      src="" // Substitua pelo link da imagem ou caminho local
       alt="Imagem de fundo"
       className="absolute opacity-60"
     />
