@@ -1,6 +1,3 @@
-Aqui está um exemplo de um arquivo `README.md` para o seu portfólio em Next.js 14:
-
----
 
 # Meu Portfólio - Next.js 14
 
