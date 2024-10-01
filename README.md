@@ -1,36 +1,68 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+Aqui está um exemplo de um arquivo `README.md` para o seu portfólio em Next.js 14:
 
-## Getting Started
+---
 
-First, run the development server:
+# Meu Portfólio - Next.js 14
+
+Este é o código-fonte do meu portfólio pessoal desenvolvido utilizando **Next.js 14**, com **Tailwind CSS** para estilização, **ShadCN UI** e **UI Aceternity** para os componentes da interface de usuário.
+
+## Funcionalidades
+
+- **Área sobre mim**: Uma seção dedicada a apresentar quem eu sou, minhas habilidades e experiências.
+- **Carrossel Automático**: Exibe as empresas para as quais já prestei serviço de forma automática.
+- **Projetos**: Lista os principais projetos que desenvolvi ao longo da minha carreira.
+- **Formulário de Contato**: Um formulário simples que, ao ser preenchido, envia uma mensagem diretamente para o meu WhatsApp.
+- **Chat**: Uma função de chat integrada que redireciona as mensagens para o meu WhatsApp.
+- **Tema Claro/Escuro**: Opção para alternar entre tema claro e escuro.
+- **Layout totalmente responsivo e otimizado com SEO**
+
+## Aviso Importante
+
+Este repositório é de uso pessoal e contém dados relacionados à minha experiência profissional e clientes para os quais já prestei serviços. **Ao clonar este repositório, você deve remover ou substituir as referências a empresas e projetos para evitar qualquer problema com apropriação indevida ou violação de direitos autorais.**
+
+## Clonando e Executando o Projeto
+
+Siga os passos abaixo para clonar e rodar o projeto localmente:
+
+### 1. Clone o Repositório
+
+```bash
+git clone https://github.com/otherpaulo/portifolio-next.git
+cd portifolio-next
+```
+
+### 2. Instale as Dependências
+
+Certifique-se de que você tem o **Node.js** e o **npm** instalados. Em seguida, instale as dependências:
+
+```bash
+npm install
+```
+
+### 3. Execute o Projeto
+
+Para rodar a aplicação em ambiente de desenvolvimento, execute:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Acesse a aplicação no navegador através da URL:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```
+http://localhost:3000
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+### 4. Build para Produção
 
-## Learn More
+Para gerar uma versão otimizada para produção, execute:
 
-To learn more about Next.js, take a look at the following resources:
+```bash
+npm run build
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Considerações Finais
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+Ao utilizar ou modificar este repositório, lembre-se de que as seções relacionadas às **empresas** e **projetos** com as quais já trabalhei devem ser devidamente substituídas para evitar problemas legais.
 
-## Deploy on Vercel
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
