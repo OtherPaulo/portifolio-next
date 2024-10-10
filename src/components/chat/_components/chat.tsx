@@ -80,12 +80,12 @@ export default function Chat() {
                 <span className="text-xs mt-4 text-gray-500 dark:text-gray-400">{currentTime}</span>
               </div>
 
-            {/* {showFirstMessage && ( */}
+            {showFirstMessage && (
               <div className="bg-white p-2 text-white dark:text-black rounded-lg shadow mb-2 max-w-[80%] flex justify-between">
                 <p>Do que você precisa?</p>
                 <span className="text-xs mt-4 text-gray-500 dark:text-gray-400">{currentTime}</span>
               </div>
-            {/* )} */}
+            )}
 
             <form onSubmit={handleSubmit} className="p-2 ">
               <div className="flex items-center space-x-2">
