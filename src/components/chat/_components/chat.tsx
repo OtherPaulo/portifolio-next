@@ -1,3 +1,5 @@
+"use client"
+
 import { useState, useEffect } from 'react'
 import { X, Send } from 'lucide-react'
 
@@ -5,8 +7,17 @@ export default function Chat() {
   const [isOpen, setIsOpen] = useState(false)
   const [message, setMessage] = useState('')
   const [currentTime, setCurrentTime] = useState('')
+  const [showFirstMessage, setShowFirstMessage] = useState(false)
 
-  const toggleChat = () => setIsOpen(!isOpen)
+  const toggleChat = () => {
+    if (!isOpen) {
+      setIsOpen(true)
+      setShowFirstMessage(false)
+      setTimeout(() => setShowFirstMessage(true), 700)
+    } else {
+      setIsOpen(false)
+    }
+  }
 
   useEffect(() => {
     const updateTime = () => {
@@ -30,16 +41,19 @@ export default function Chat() {
   }
 
   return (
-<div className="fixed bottom-4 right-4 z-[10001] flex flex-col items-end pointer-events-auto">
-  {isOpen && (
+    <div className="fixed bottom-4 right-4 z-[10001] flex flex-col items-end pointer-events-auto">
+      {isOpen && (
         <div className="bg-white dark:bg-gray-800 rounded-lg shadow-lg w-80 mb-4 overflow-hidden">
           <div className="bg-emerald-600 p-4 flex items-center justify-between">
             <div className="flex items-center space-x-2">
-              <img
-                src="/user-perfil.jpeg?height=40&width=40"
-                alt="Profile"
-                className="w-10 h-10 rounded-full"
-              />
+              <div className="relative">
+                <img
+                  src="/user-perfil.jpeg?height=40&width=40"
+                  alt="Avatar"
+                  className="w-10 h-10 rounded-full"
+                />
+                <span className="absolute bottom-0 right-0 block h-2.5 w-2.5 rounded-full bg-green-400 ring-2 ring-white" />
+              </div>
               <div>
                 <h3 className="text-white font-semibold">Paulo</h3>
                 <p className="text-emerald-200 text-sm">Online</p>
@@ -61,35 +75,38 @@ export default function Chat() {
               backgroundPosition: 'center',
             }}
           >
-            <div className="bg-white p-2 text-white dark:text-black rounded-lg shadow mb-2 max-w-[80%]">
-              <p>Olá 👋</p> <br />
-              <p>O que você está precisando?</p>
-              <span className="text-xs text-gray-500 dark:text-gray-400">{currentTime}</span>
-            </div>
+              <div className="bg-white p-2 text-white dark:text-black rounded-lg shadow mb-2 max-w-[80%] flex justify-between">
+                <p>Olá 👋</p>
+                <span className="text-xs mt-4 text-gray-500 dark:text-gray-400">{currentTime}</span>
+              </div>
 
+            {/* {showFirstMessage && ( */}
+              <div className="bg-white p-2 text-white dark:text-black rounded-lg shadow mb-2 max-w-[80%] flex justify-between">
+                <p>Do que você precisa?</p>
+                <span className="text-xs mt-4 text-gray-500 dark:text-gray-400">{currentTime}</span>
+              </div>
+            {/* )} */}
 
-            <form onSubmit={handleSubmit} className="p-2 mt-10">
-            <div className="flex items-center space-x-2">
-              <input
-                type="text"
-                value={message}
-                onChange={(e) => setMessage(e.target.value)}
-                placeholder="Quero uma página de vendas!"
-                className="flex-grow p-2 border rounded-full focus:outline-none focus:ring-2 focus:ring-emerald-500 dark:bg-white dark:text-black dark:border-gray-600"
-                aria-label="Digite sua mensagem"
-              />
-              <button
-                type="submit"
-                className="bg-emerald-500 text-white p-2 rounded-full hover:bg-emerald-600 focus:outline-none focus:ring-2 focus:ring-emerald-500"
-                aria-label="Enviar mensagem"
-              >
-                <Send className="w-5 h-5" />
-              </button>
-            </div>
-          </form>
+            <form onSubmit={handleSubmit} className="p-2 ">
+              <div className="flex items-center space-x-2">
+                <input
+                  type="text"
+                  value={message}
+                  onChange={(e) => setMessage(e.target.value)}
+                  placeholder="Quero fechar um orçamento!"
+                  className="flex-grow p-2 border rounded-full focus:outline-none focus:ring-2 focus:ring-emerald-500 dark:bg-white dark:text-black dark:border-gray-600 placeholder:text-left placeholder:whitespace-pre-line"
+                  aria-label="Digite sua mensagem"
+                />
+                <button
+                  type="submit"
+                  className="bg-emerald-500 text-white p-2 rounded-full hover:bg-emerald-600 focus:outline-none focus:ring-2 focus:ring-emerald-500"
+                  aria-label="Enviar mensagem"
+                >
+                  <Send className="w-5 h-5" />
+                </button>
+              </div>
+            </form>
           </div>
-
-
         </div>
       )}
       <button
