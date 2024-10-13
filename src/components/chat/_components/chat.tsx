@@ -75,7 +75,14 @@ export default function Chat() {
             }}
           >
               <div className="bg-white p-2 text-black dark:text-black rounded-lg shadow mb-2 max-w-[80%] flex justify-between">
-                <p>Olá 👋</p>
+                <div className="flex items-center space-x-1">
+                  <p>Olá</p>
+                  <img 
+                  src="/emoji.svg" 
+                  alt="Emoji Olá" 
+                  className="w-6 h-6" 
+                  />
+                </div>
                 <span className="text-xs mt-4 text-gray-500 dark:text-gray-400">{currentTime}</span>
               </div>
 
