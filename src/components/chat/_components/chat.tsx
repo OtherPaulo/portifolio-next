@@ -71,17 +71,16 @@ export default function Chat() {
             className="h-50 overflow-y-auto p-2 bg-emerald-50 dark:bg-gray-700"
             style={{
               backgroundImage: `url('/bg-whatsapp.jpeg')`,
-              backgroundSize: 'cover',
               backgroundPosition: 'center',
             }}
           >
-              <div className="bg-white p-2 text-white dark:text-black rounded-lg shadow mb-2 max-w-[80%] flex justify-between">
+              <div className="bg-white p-2 text-black dark:text-black rounded-lg shadow mb-2 max-w-[80%] flex justify-between">
                 <p>Olá 👋</p>
                 <span className="text-xs mt-4 text-gray-500 dark:text-gray-400">{currentTime}</span>
               </div>
 
             {showFirstMessage && (
-              <div className="bg-white p-2 text-white dark:text-black rounded-lg shadow mb-2 max-w-[80%] flex justify-between">
+              <div className="bg-white p-2 text-black dark:text-black rounded-lg shadow mb-2 max-w-[80%] flex justify-between">
                 <p>Do que você precisa?</p>
                 <span className="text-xs mt-4 text-gray-500 dark:text-gray-400">{currentTime}</span>
               </div>
@@ -94,7 +93,7 @@ export default function Chat() {
                   value={message}
                   onChange={(e) => setMessage(e.target.value)}
                   placeholder="Quero fechar um orçamento!"
-                  className="flex-grow p-2 border rounded-full focus:outline-none focus:ring-2 focus:ring-emerald-500 dark:bg-white dark:text-black dark:border-gray-600 placeholder:text-left placeholder:whitespace-pre-line"
+                  className="flex-grow p-2 rounded-full focus:outline-none focus:ring-2 focus:ring-emerald-500 dark:bg-white dark:text-black dark:border-gray-600 placeholder:text-left placeholder:whitespace-pre-line"
                   aria-label="Digite sua mensagem"
                 />
                 <button
