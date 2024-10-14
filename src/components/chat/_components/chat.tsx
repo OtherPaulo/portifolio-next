@@ -1,7 +1,7 @@
 "use client"
 
 import { useState, useEffect } from 'react'
-import { X, Send } from 'lucide-react'
+import { X, SendHorizontal } from 'lucide-react'
 
 export default function Chat() {
   const [isOpen, setIsOpen] = useState(false)
@@ -108,7 +108,7 @@ export default function Chat() {
                   className="bg-emerald-500 text-white p-2 rounded-full hover:bg-emerald-600 focus:outline-none focus:ring-2 focus:ring-emerald-500"
                   aria-label="Enviar mensagem"
                 >
-                  <Send className="w-5 h-5" />
+                  <SendHorizontal className="w-5 h-5" />
                 </button>
               </div>
             </form>
