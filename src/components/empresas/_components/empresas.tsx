@@ -3,37 +3,37 @@ import Marquee from "@/components/magicui/marquee";
 
 const reviews = [
   {
-    img: "https://portifolio.paulorodrigues.tech/Charm.png",
+    img: "https://desafio-fullstack-app-portifolio.w19s7b.easypanel.host/Charm.png",
     url: "https://charmricordi.com/",
     alt: "Charm",
   },
   {
-    img: "https://portifolio.paulorodrigues.tech/Encaixa.ai.png",
+    img: "https://desafio-fullstack-app-portifolio.w19s7b.easypanel.host/Encaixa.ai.png",
     url: "https://encaixa.ai",
     alt: "Encaixa.ai",
   },
   {
-    img: "https://portifolio.paulorodrigues.tech/ICTS.png",
+    img: "https://desafio-fullstack-app-portifolio.w19s7b.easypanel.host/ICTS.png",
     url: "https://grupoicts.com.br",
     alt: "Grupo ICTS",
   },
   {
-    img: "https://portifolio.paulorodrigues.tech/KLIRVA.png",
-    url: "https://klirva.paulorodrigues.tech",
+    img: "https://desafio-fullstack-app-portifolio.w19s7b.easypanel.host/KLIRVA.png",
+    url: "https://https://klirva-klirva-front.w19s7b.easypanel.host/",
     alt: "Klirva",
   },
   {
-    img: "https://portifolio.paulorodrigues.tech/La Ganexa.png",
+    img: "https://desafio-fullstack-app-portifolio.w19s7b.easypanel.host/La Ganexa.png",
     url: "https://lojalaganexa.com.br",
     alt: "La Ganexa",
   },
   {
-    img: "https://portifolio.paulorodrigues.tech/Maxi Made in Brazil.png",
+    img: "https://desafio-fullstack-app-portifolio.w19s7b.easypanel.host/Maxi Made in Brazil.png",
     url: "https://maximadeinbrazil.com",
     alt: "Maxi Made in Brazil",
   },
   {
-    img: "https://portifolio.paulorodrigues.tech/Lyna.png",
+    img: "https://desafio-fullstack-app-portifolio.w19s7b.easypanel.host/Lyna.png",
     url: "https://lynaesthetic.com.br",
     alt: "LynaEsthetic",
   },
