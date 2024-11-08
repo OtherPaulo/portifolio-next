@@ -16,7 +16,7 @@ export const metadata: Metadata = {
   authors: [
     {
       name: "Paulo",
-      url: "https://portifolio.paulorodrigues.tech",
+      url: "https://portfolio.devpaulorodrigues.tech",
     },
   ],
   openGraph: {
@@ -24,7 +24,7 @@ export const metadata: Metadata = {
     description: "Seu Desenvolvedor FullStack",
     images: [
       {
-        url: "https://portifolio.paulorodrigues.tech/portifolio-paulo.jpeg",
+        url: "https://portfolio.devpaulorodrigues.tech/portifolio-paulo.jpeg",
         alt: "Paulo Rodrigues",
       }
     ],

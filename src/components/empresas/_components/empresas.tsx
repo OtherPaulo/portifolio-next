@@ -3,37 +3,37 @@ import Marquee from "@/components/magicui/marquee";
 
 const reviews = [
   {
-    img: "https://desafio-fullstack-app-portifolio.w19s7b.easypanel.host/Charm.png",
+    img: "https://portfolio.devpaulorodrigues.tech/Charm.png",
     url: "https://charmricordi.com/",
     alt: "Charm",
   },
   {
-    img: "https://desafio-fullstack-app-portifolio.w19s7b.easypanel.host/Encaixa.ai.png",
+    img: "https://portfolio.devpaulorodrigues.tech/Encaixa.ai.png",
     url: "https://encaixa.ai",
     alt: "Encaixa.ai",
   },
   {
-    img: "https://desafio-fullstack-app-portifolio.w19s7b.easypanel.host/ICTS.png",
+    img: "https://portfolio.devpaulorodrigues.tech/ICTS.png",
     url: "https://grupoicts.com.br",
     alt: "Grupo ICTS",
   },
   {
-    img: "https://desafio-fullstack-app-portifolio.w19s7b.easypanel.host/KLIRVA.png",
+    img: "https://portfolio.devpaulorodrigues.tech/KLIRVA.png",
     url: "https://https://klirva-klirva-front.w19s7b.easypanel.host/",
     alt: "Klirva",
   },
   {
-    img: "https://desafio-fullstack-app-portifolio.w19s7b.easypanel.host/La Ganexa.png",
+    img: "https://portfolio.devpaulorodrigues.tech/La Ganexa.png",
     url: "https://lojalaganexa.com.br",
     alt: "La Ganexa",
   },
   {
-    img: "https://desafio-fullstack-app-portifolio.w19s7b.easypanel.host/Maxi Made in Brazil.png",
+    img: "https://portfolio.devpaulorodrigues.tech/Maxi Made in Brazil.png",
     url: "https://maximadeinbrazil.com",
     alt: "Maxi Made in Brazil",
   },
   {
-    img: "https://desafio-fullstack-app-portifolio.w19s7b.easypanel.host/Lyna.png",
+    img: "https://portfolio.devpaulorodrigues.tech/Lyna.png",
     url: "https://lynaesthetic.com.br",
     alt: "LynaEsthetic",
   },
