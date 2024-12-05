@@ -128,7 +128,7 @@ export default function SafariLyna({
           />
         </g>
         <image
-          xlinkHref="/Lynasthetic.png"
+          xlinkHref="/project-laganexa.png"
           width="1200"
           height="700"
           x="1"

@@ -15,7 +15,7 @@ export function Servicos() {
       content: (
         <div className="w-full overflow-hidden relative h-full rounded-2xl p-10 text-xl md:text-4xl font-bold text-white bg-[#0E0E10]">
           <p className="mb-2">Aplicação completa</p>
-          <Safari url="klirva.paulorodrigues.tech" className="size-full" />
+          <Safari url="app.devpaulorodrigues.tech" className="size-full" />
           <BorderBeam size={250} duration={12} delay={9} />
         </div>
       ),
@@ -26,7 +26,7 @@ export function Servicos() {
       content: (
         <div className="w-full overflow-hidden relative h-full rounded-2xl p-10 text-xl md:text-4xl font-bold text-white bg-[#0E0E10]">
           <p className="mb-2">Loja Virtual</p>
-          <SafariLyna url="lynaesthetic.com.br" className="size-full" />
+          <SafariLyna url="lojalaganexa.com.br" className="size-full" />
           <BorderBeam size={250} duration={12} delay={9} />
         </div>
       ),

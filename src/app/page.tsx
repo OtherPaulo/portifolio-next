@@ -36,9 +36,9 @@ export default function Component() {
           <Link href="#servicos" className="text-sm font-medium hover:underline underline-offset-4" prefetch={false}>
             Serviços
           </Link>
-          <Link href="#projetos" className="text-sm font-medium hover:underline underline-offset-4" prefetch={false}>
+          {/* <Link href="#projetos" className="text-sm font-medium hover:underline underline-offset-4" prefetch={false}>
             Projetos
-          </Link>
+          </Link> */}
             <Link href="#contato" className="border text-sm font-medium relative border-neutral-200 dark:border-white/[0.2] text-black dark:text-white px-4 py-2 rounded-full">
             <span>{"Contato"}</span>
             <span className="absolute inset-x-0 w-1/2 mx-auto -bottom-px bg-gradient-to-r from-transparent via-blue-500 to-transparent  h-px" />

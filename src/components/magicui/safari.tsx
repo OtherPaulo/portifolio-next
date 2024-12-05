@@ -128,7 +128,7 @@ export default function Safari({
           />
         </g>
         <image
-          xlinkHref="/klirva.jpeg"
+          xlinkHref="/projeto-klirva.png"
           width="1200"
           height="700"
           x="1"

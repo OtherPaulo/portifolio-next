@@ -19,7 +19,7 @@ const reviews = [
   },
   {
     img: "https://portfolio.devpaulorodrigues.tech/KLIRVA.png",
-    url: "https://https://klirva-klirva-front.w19s7b.easypanel.host/",
+    url: "https://app.devpaulorodrigues.tech/",
     alt: "Klirva",
   },
   {

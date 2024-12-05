@@ -14,7 +14,7 @@ export function Sobre() {
                 Encaixa.ai
               </LinkPreview>{" "}
               e estou desenvolvendo um novo micro-saas chamado{" "}
-              <LinkPreview url="https://klirva.paulorodrigues.tech" className="font-bold">
+              <LinkPreview url="https://app.devpaulorodrigues.tech/" className="font-bold">
                 Klirva,
               </LinkPreview>{" "}
               uma solução moderna e acessivel para ecommerces.
@@ -22,7 +22,7 @@ export function Sobre() {
             <p className="text-neutral-500 dark:text-neutral-400 text-lg md:text-xl max-w-3xl mx-auto">
               Visite meu{" "}
               <LinkPreview
-                url="https://paulorodrigues.tech"
+                url="https://link-bio-paulo.netlify.app/"
                 className="font-bold"
               >
                 Link-Bio
