@@ -27,7 +27,7 @@ export default function Footer() {
         </div>
         <div className="text-center text-sm">
           <p>&copy; {currentYear} Paulo Rodrigues - Desenvolvedor FullStack</p>
-          <p>Todos os direitos reservados</p>
+          <p>Todos os direitos reservados.</p>
         </div>
       </div>
     </footer>
