@@ -11,7 +11,7 @@ const experiencias = [
     periodo: "fev de 2025 - o momento · 6 meses",
     tipo: "Tempo integral",
     localizacao: "Presencial",
-    logo: "/innyx-logo.png", // Você pode adicionar o logo se tiver
+    logo: "https://media.licdn.com/dms/image/v2/D4D0BAQGCzqxbCCSIkw/company-logo_100_100/company-logo_100_100/0/1689078459851/innyxtecnologia_logo?e=1756944000&v=beta&t=hv6m_Is4Lsho4G9_a6zBPLsIbLHf7ZaVp2MwAzodLzA", // Você pode adicionar o logo se tiver
     descricao: "Desenvolvedor Fullstack Web & Mobile | Innyx Educação",
     detalhes: "Atualmente atuo como Desenvolvedor Fullstack na Innyx Educação, contribuindo ativamente na criação e manutenção de aplicações web e mobile escaláveis e de alta performance. Trabalho diariamente com tecnologias como Vue.js, Next.js, PHP, Node.js, React Native (Expo) e Python, desenvolvendo soluções completas, desde a concepção de novas features até a entrega em produção.",
     responsabilidades: [
