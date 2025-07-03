@@ -47,7 +47,7 @@ const experiencias = [
     periodo: "mar de 2022 - o momento · 3 anos 5 meses",
     tipo: "Freelance",
     localizacao: "Remota",
-    logo: "/freelance-logo.png", // Você pode adicionar um ícone genérico
+    logo: "https://cdn-icons-png.flaticon.com/512/9495/9495859.png", // Você pode adicionar um ícone genérico
     descricao: "Atuo como desenvolvedor freelancer com mais de 20 projetos entregues com sucesso, atendendo clientes de diversos segmentos com soluções personalizadas e eficientes. Minha experiência vai desde o desenvolvimento de aplicações completas do zero até a manutenção e evolução de sistemas já existentes, sempre com foco em performance, usabilidade e escalabilidade.",
     detalhes: "Ao longo dessa jornada, trabalhei com uma ampla gama de tecnologias e stacks, adaptando a escolha das ferramentas às necessidades específicas de cada projeto. Entre elas: JavaScript (Vue.js, React, Next.js), Node.js, PHP, Python, React Native, Expo, entre outras.",
     responsabilidades: [
