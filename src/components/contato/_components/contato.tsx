@@ -1,10 +1,36 @@
 'use client'
 
+import { motion } from "framer-motion"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
 import { Label } from "@/components/ui/label"
 import { useState } from "react"
+
+const containerVariants = {
+  hidden: { opacity: 0, y: 50 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 0.8,
+      ease: "easeOut",
+      staggerChildren: 0.2
+    }
+  }
+};
+
+const itemVariants = {
+  hidden: { opacity: 0, y: 30 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 0.6,
+      ease: "easeOut"
+    }
+  }
+};
 
 export default function Contato() {
     const [name, setName] = useState("")
@@ -21,10 +47,24 @@ export default function Contato() {
     }
 
     return (
-        <section id="contato" className="w-full max-w-2xl mx-auto py-12 px-4">
-            <h2 className="text-3xl font-bold text-center mb-6">Entre em Contato via WhatsApp</h2>
-            <form onSubmit={handleSubmit} className="space-y-6">
-                <div className="space-y-2">
+        <motion.section 
+            id="contato" 
+            className="w-full max-w-2xl mx-auto py-12 px-4"
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.3 }}
+            variants={containerVariants}
+        >
+            <motion.div variants={itemVariants}>
+                <h2 className="text-3xl font-bold text-center mb-6">Entre em Contato via WhatsApp</h2>
+            </motion.div>
+            
+            <motion.form 
+                onSubmit={handleSubmit} 
+                className="space-y-6"
+                variants={containerVariants}
+            >
+                <motion.div className="space-y-2" variants={itemVariants}>
                     <Label htmlFor="name">Nome</Label>
                     <Input 
                         id="name" 
@@ -33,8 +73,9 @@ export default function Contato() {
                         placeholder="Seu nome" 
                         required 
                     />
-                </div>
-                <div className="space-y-2">
+                </motion.div>
+                
+                <motion.div className="space-y-2" variants={itemVariants}>
                     <Label htmlFor="companyName">Empresa</Label>
                     <Input 
                         id="companyName" 
@@ -43,8 +84,9 @@ export default function Contato() {
                         placeholder="Nome da empresa" 
                         required 
                     />
-                </div>
-                <div className="space-y-2">
+                </motion.div>
+                
+                <motion.div className="space-y-2" variants={itemVariants}>
                     <Label htmlFor="subject">Assunto</Label>
                     <Input 
                         id="subject" 
@@ -53,8 +95,9 @@ export default function Contato() {
                         placeholder="Assunto da mensagem" 
                         required 
                     />
-                </div>
-                <div className="space-y-2">
+                </motion.div>
+                
+                <motion.div className="space-y-2" variants={itemVariants}>
                     <Label htmlFor="message">Mensagem</Label>
                     <Textarea 
                         id="message" 
@@ -64,9 +107,12 @@ export default function Contato() {
                         required 
                         className="min-h-[150px]" 
                     />
-                </div>
-                <Button type="submit" className="w-full">Enviar Mensagem via WhatsApp</Button>
-            </form>
-        </section>
+                </motion.div>
+                
+                <motion.div variants={itemVariants}>
+                    <Button type="submit" className="w-full">Enviar Mensagem via WhatsApp</Button>
+                </motion.div>
+            </motion.form>
+        </motion.section>
     )
 }

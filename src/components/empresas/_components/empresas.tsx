@@ -1,3 +1,5 @@
+"use client";
+import { motion } from "framer-motion";
 import { cn } from "@/lib/utils";
 import Marquee from "@/components/magicui/marquee";
 
@@ -57,7 +59,6 @@ const ReviewCard = ({
         "relative w-25 md:w-64 cursor-pointer overflow-hidden rounded-xl p-4",
       )}
     >
-
       <div className="flex flex-row items-center">
         <a href={url} target="_blank" rel="noopener noreferrer">
           <img src={img} alt={alt} />
@@ -67,28 +68,57 @@ const ReviewCard = ({
   );
 };
 
+const containerVariants = {
+  hidden: { opacity: 0, y: 50 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 0.8,
+      ease: "easeOut"
+    }
+  }
+};
+
 export function Empresas() {
   return (
-    <section id="servicos" className="w-full overflow-hidden">
-    <div className="mb-2 text-center">
-    <h2 className="text-2xl md:text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-b from-neutral-800 via-neutral-700 to-neutral-700 dark:from-neutral-800 dark:via-white dark:to-white">
-      Serviços Prestados:
-    </h2>
-  </div>
-    <div className="relative flex h-[200px] w-full flex-col items-center justify-center overflow-hidden rounded-lg">
-      <Marquee pauseOnHover className="[--duration:20s]">
-        {firstRow.map((review) => (
-          <ReviewCard key={review.img} {...review} />
-        ))}
-      </Marquee>
-      <Marquee reverse pauseOnHover className="[--duration:20s]">
-        {secondRow.map((review) => (
-          <ReviewCard key={review.img} {...review} />
-        ))}
-      </Marquee>
-      <div className="pointer-events-none absolute inset-y-0 left-0 w-1/3 bg-gradient-to-r "></div>
-      <div className="pointer-events-none absolute inset-y-0 right-0 w-1/3 bg-gradient-to-l "></div>
-    </div>
-    </section>
+    <motion.section 
+      id="servicos" 
+      className="w-full overflow-hidden py-12"
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true, amount: 0.3 }}
+      variants={containerVariants}
+    >
+      <motion.div 
+        className="mb-8 text-center"
+        variants={containerVariants}
+      >
+        <h2 className="text-2xl md:text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-b from-neutral-800 via-neutral-700 to-neutral-700 dark:from-neutral-800 dark:via-white dark:to-white">
+          Serviços Prestados
+        </h2>
+        <p className="text-lg text-gray-600 dark:text-gray-400 mt-4 max-w-2xl mx-auto">
+          Empresas que confiaram no meu trabalho para desenvolver suas soluções digitais
+        </p>
+      </motion.div>
+      
+      <motion.div 
+        className="relative flex h-[200px] w-full flex-col items-center justify-center overflow-hidden rounded-lg"
+        variants={containerVariants}
+      >
+        <Marquee pauseOnHover className="[--duration:20s]">
+          {firstRow.map((review) => (
+            <ReviewCard key={review.img} {...review} />
+          ))}
+        </Marquee>
+        <Marquee reverse pauseOnHover className="[--duration:20s]">
+          {secondRow.map((review) => (
+            <ReviewCard key={review.img} {...review} />
+          ))}
+        </Marquee>
+        <div className="pointer-events-none absolute inset-y-0 left-0 w-1/3 bg-gradient-to-r "></div>
+        <div className="pointer-events-none absolute inset-y-0 right-0 w-1/3 bg-gradient-to-l "></div>
+      </motion.div>
+    </motion.section>
   );
 }

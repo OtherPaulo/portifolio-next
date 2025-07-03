@@ -1,38 +1,103 @@
+"use client";
+import { motion } from "framer-motion";
 import { Instagram, Github, Linkedin } from "lucide-react"
 import { SVGProps } from "react"
+
+const containerVariants = {
+  hidden: { opacity: 0, y: 30 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 0.6,
+      ease: "easeOut",
+      staggerChildren: 0.1
+    }
+  }
+};
+
+const itemVariants = {
+  hidden: { opacity: 0, y: 20 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 0.5,
+      ease: "easeOut"
+    }
+  }
+};
 
 export default function Footer() {
   const currentYear = new Date().getFullYear()
 
   return (
-    <footer className="py-8">
+    <motion.footer 
+      className="py-8"
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true, amount: 0.3 }}
+      variants={containerVariants}
+    >
       <div className="container mx-auto px-4">
-        <div className="flex justify-center space-x-6 mb-6">
-          <a href="https://www.instagram.com/otherpaulo" target="_blank" rel="noopener noreferrer">
+        <motion.div 
+          className="flex justify-center space-x-6 mb-6"
+          variants={itemVariants}
+        >
+          <motion.a 
+            href="https://www.instagram.com/otherpaulo" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            whileHover={{ scale: 1.1 }}
+            whileTap={{ scale: 0.95 }}
+          >
             <Instagram size={24} />
             <span className="sr-only">Instagram</span>
-          </a>
-          <a href="https://github.com/OtherPaulo" target="_blank" rel="noopener noreferrer">
+          </motion.a>
+          <motion.a 
+            href="https://github.com/OtherPaulo" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            whileHover={{ scale: 1.1 }}
+            whileTap={{ scale: 0.95 }}
+          >
             <Github size={24} />
             <span className="sr-only">GitHub</span>
-          </a>
-          <a href="https://www.linkedin.com/in/otherpaulo" target="_blank" rel="noopener noreferrer">
+          </motion.a>
+          <motion.a 
+            href="https://www.linkedin.com/in/otherpaulo" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            whileHover={{ scale: 1.1 }}
+            whileTap={{ scale: 0.95 }}
+          >
             <Linkedin size={24} />
             <span className="sr-only">LinkedIn</span>
-          </a>
-          <a href="https://www.tiktok.com/@paulooosz" target="_blank" rel="noopener noreferrer">
+          </motion.a>
+          <motion.a 
+            href="https://www.tiktok.com/@paulooosz" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            whileHover={{ scale: 1.1 }}
+            whileTap={{ scale: 0.95 }}
+          >
             <TikTok />
             <span className="sr-only">TikTok</span>
-          </a>
-        </div>
-        <div className="text-center text-sm">
+          </motion.a>
+        </motion.div>
+        
+        <motion.div 
+          className="text-center text-sm"
+          variants={itemVariants}
+        >
           <p>&copy; {currentYear} Paulo Rodrigues - Desenvolvedor FullStack</p>
           <p>Todos os direitos reservados.</p>
-        </div>
+        </motion.div>
       </div>
-    </footer>
+    </motion.footer>
   )
 }
+
 function TikTok(props: JSX.IntrinsicAttributes & SVGProps<SVGSVGElement>) {
     return (
     <svg 
