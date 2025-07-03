@@ -30,7 +30,7 @@ const experiencias = [
     periodo: "jan de 2024 - o momento · 1 ano 7 meses",
     tipo: "Tempo integral",
     localizacao: "Remota",
-    logo: "/Encaixa.ai.png",
+    logo: "https://media.licdn.com/dms/image/v2/D4D0BAQGJl1c-3B42-Q/company-logo_100_100/company-logo_100_100/0/1710792237459?e=1756944000&v=beta&t=CyO13IthICcZYRp_At7w-o8pJghPWFwtxB2IW9gKyO8",
     descricao: "Na Encaixa.ai, atuo como desenvolvedor responsável por transformar ideias em funcionalidades sólidas e eficientes, contribuindo para o desenvolvimento e evolução de uma plataforma moderna e centrada na experiência do usuário.",
     responsabilidades: [
       "Criação e desenvolvimento de páginas web, focando em performance, responsividade e alinhamento com a identidade da aplicação.",
