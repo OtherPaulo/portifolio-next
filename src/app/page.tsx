@@ -11,6 +11,7 @@ import { Servicos } from "@/components/servicos/_components/servicos"
 import Chat from "@/components/chat/_components/chat"
 import HyperText from "@/components/magicui/hyper-text"
 import { Empresas } from "@/components/empresas/_components/empresas"
+import { Experiencias } from "@/components/experiencias/_components/experiencias"
 import Footer from "@/components/footer/_components/footer"
 import Contato from "@/components/contato/_components/contato"
 
@@ -36,10 +37,10 @@ export default function Component() {
           <Link href="#servicos" className="text-sm font-medium hover:underline underline-offset-4" prefetch={false}>
             Serviços
           </Link>
-          {/* <Link href="#projetos" className="text-sm font-medium hover:underline underline-offset-4" prefetch={false}>
-            Projetos
-          </Link> */}
-            <Link href="#contato" className="border text-sm font-medium relative border-neutral-200 dark:border-white/[0.2] text-black dark:text-white px-4 py-2 rounded-full">
+          <Link href="#experiencias" className="text-sm font-medium hover:underline underline-offset-4" prefetch={false}>
+            Experiência
+          </Link>
+          <Link href="#contato" className="border text-sm font-medium relative border-neutral-200 dark:border-white/[0.2] text-black dark:text-white px-4 py-2 rounded-full">
             <span>{"Contato"}</span>
             <span className="absolute inset-x-0 w-1/2 mx-auto -bottom-px bg-gradient-to-r from-transparent via-blue-500 to-transparent  h-px" />
             </Link>
@@ -66,8 +67,8 @@ export default function Component() {
               <Link href="#servicos" className="flex items-center gap-2 text-lg font-medium" prefetch={false}>
               Serviços
               </Link>
-              <Link href="#projetos" className="flex items-center gap-2 text-lg font-medium" prefetch={false}>
-                Projetos
+              <Link href="#experiencias" className="flex items-center gap-2 text-lg font-medium" prefetch={false}>
+                Experiência
               </Link>
               <Link href="#contato" className="flex items-center gap-2 text-lg font-medium" prefetch={false}>
                 Contato
@@ -84,6 +85,7 @@ export default function Component() {
       <Home />
       <Sobre />
       <Empresas />
+      <Experiencias />
       <Servicos />
       
       <Contato />
