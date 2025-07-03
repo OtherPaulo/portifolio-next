@@ -3,37 +3,37 @@ import Marquee from "@/components/magicui/marquee";
 
 const reviews = [
   {
-    img: "https://portfolio.devpaulorodrigues.tech/Charm.png",
+    img: "/Charm.png",
     url: "https://charmricordi.com/",
     alt: "Charm",
   },
   {
-    img: "https://portfolio.devpaulorodrigues.tech/Encaixa.ai.png",
+    img: "/Encaixa.ai.png",
     url: "https://encaixa.ai",
     alt: "Encaixa.ai",
   },
   {
-    img: "https://portfolio.devpaulorodrigues.tech/ICTS.png",
+    img: "/ICTS.png",
     url: "https://grupoicts.com.br",
     alt: "Grupo ICTS",
   },
   {
-    img: "https://portfolio.devpaulorodrigues.tech/KLIRVA.png",
+    img: "/KLIRVA.png",
     url: "https://app.devpaulorodrigues.tech/",
     alt: "Klirva",
   },
   {
-    img: "https://portfolio.devpaulorodrigues.tech/La Ganexa.png",
+    img: "/La Ganexa.png",
     url: "https://lojalaganexa.com.br",
     alt: "La Ganexa",
   },
   {
-    img: "https://portfolio.devpaulorodrigues.tech/Maxi Made in Brazil.png",
+    img: "/Maxi Made in Brazil.png",
     url: "https://maximadeinbrazil.com",
     alt: "Maxi Made in Brazil",
   },
   {
-    img: "https://portfolio.devpaulorodrigues.tech/Lyna.png",
+    img: "/Lyna.png",
     url: "https://lynaesthetic.com.br",
     alt: "LynaEsthetic",
   },
@@ -92,4 +92,3 @@ export function Empresas() {
     </section>
   );
 }
-
