@@ -66,7 +66,7 @@ const experiencias = [
     periodo: "abr de 2023 - abr de 2024 · 1 ano 1 mês",
     tipo: "Presencial",
     localizacao: "Manaus, Amazonas, Brasil",
-    logo: "/ICTS.png",
+    logo: "https://scontent.fpll6-1.fna.fbcdn.net/v/t39.30808-1/335628193_771336247721724_8276273110667695142_n.jpg?stp=c25.0.750.750a_dst-jpg_s200x200_tt6&_nc_cat=109&ccb=1-7&_nc_sid=2d3e12&_nc_ohc=6oiMDSEi1ywQ7kNvwHdIB6V&_nc_oc=AdllxnDI1P-e798BZZGcOULBOb6Me0uYFtc4iAd5bU_E3vh_F5eJ0xzQxnWeg8lGFCY&_nc_zt=24&_nc_ht=scontent.fpll6-1.fna&_nc_gid=ac5WXmnXOmwSe5ysB0gnKw&oh=00_AfNE-qC3Hi2wPQ6tOw_K6LYKluS5BOz7NaFWp7ulkPIoEw&oe=686C92CD",
     descricao: "Desenvolvedor Web | Grupo ICTS – Área de P&D",
     detalhes: "Atuei no setor de Pesquisa e Desenvolvimento (P&D) do Grupo ICTS, contribuindo diretamente para a criação e evolução de soluções web robustas e escaláveis. Trabalhei com foco em inovação, qualidade de entrega e boas práticas de desenvolvimento.",
     responsabilidades: [
