@@ -95,7 +95,7 @@ const ExperienceCard = ({ experiencia, index }: { experiencia: any; index: numbe
             <img 
               src={experiencia.logo} 
               alt={experiencia.empresa}
-              className="w-12 h-12 rounded-lg object-contain bg-gray-100 dark:bg-gray-700 p-2"
+              className="w-12 h-12 rounded-lg object-contain bg-gray-100 dark:bg-gray-700 p-1"
             />
           </div>
         )}
