@@ -47,23 +47,8 @@ export function Sobre() {
           >
             Olá! Sou <strong className="text-neutral-800 dark:text-white">Paulo Rodrigues</strong>, 
             um desenvolvedor FullStack apaixonado por tecnologia e inovação. Com mais de 3 anos de experiência 
-            no desenvolvimento de soluções web e mobile, tenho o prazer de transformar ideias em produtos digitais 
+            no desenvolvimento de soluções web e mobile. Atualmente, trabalho como FullStack Developer na INNYX Educação e tenho o prazer de transformar ideias em produtos digitais 
             que fazem a diferença.
-          </motion.p>
-          
-          <motion.p 
-            className="text-neutral-500 dark:text-neutral-400 text-lg md:text-xl max-w-3xl mx-auto mb-6"
-            variants={itemVariants}
-          >
-            Atualmente, sou Co-Founder na{" "}
-            <LinkPreview url="https://encaixa.ai" className="font-bold">
-              Encaixa.ai
-            </LinkPreview>{" "}
-            e trabalho como FullStack Developer na INNYX Educação. Também estou desenvolvendo um micro-SaaS inovador chamado{" "}
-            <LinkPreview url="https://app.devpaulorodrigues.tech/" className="font-bold">
-              Klirva
-            </LinkPreview>
-            , uma solução moderna e acessível para e-commerces.
           </motion.p>
           
           <motion.p 
