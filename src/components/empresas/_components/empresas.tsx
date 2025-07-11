@@ -2,6 +2,7 @@
 import { motion } from "framer-motion";
 import { cn } from "@/lib/utils";
 import Marquee from "@/components/magicui/marquee";
+import { useTranslations } from 'next-intl';
 
 const reviews = [
   {
@@ -81,6 +82,8 @@ const containerVariants = {
 };
 
 export function Empresas() {
+  const t = useTranslations('companies');
+  
   return (
     <motion.section 
       id="servicos" 
@@ -95,10 +98,10 @@ export function Empresas() {
         variants={containerVariants}
       >
         <h2 className="text-2xl md:text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-b from-neutral-800 via-neutral-700 to-neutral-700 dark:from-neutral-800 dark:via-white dark:to-white">
-          Serviços Prestados
+          {t('title')}
         </h2>
         <p className="text-lg text-gray-600 dark:text-gray-400 mt-4 max-w-2xl mx-auto">
-          Empresas que confiaram no meu trabalho para desenvolver suas soluções digitais
+          {t('description')}
         </p>
       </motion.div>
       

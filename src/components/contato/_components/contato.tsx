@@ -6,6 +6,7 @@ import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
 import { Label } from "@/components/ui/label"
 import { useState } from "react"
+import { useTranslations } from 'next-intl'
 
 const containerVariants = {
   hidden: { opacity: 0, y: 50 },
@@ -33,6 +34,7 @@ const itemVariants = {
 };
 
 export default function Contato() {
+    const t = useTranslations('contact')
     const [name, setName] = useState("")
     const [companyName, setCompanyName] = useState("")
     const [subject, setSubject] = useState("")

@@ -2,6 +2,16 @@
 import { motion } from "framer-motion";
 import { Instagram, Github, Linkedin } from "lucide-react"
 import { SVGProps } from "react"
+import { useTranslations, useLocale } from 'next-intl'
+import { useRouter, usePathname } from 'next/navigation'
+import { 
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu"
+import { Button } from "@/components/ui/button"
+import { Globe } from "lucide-react"
 
 const containerVariants = {
   hidden: { opacity: 0, y: 30 },
@@ -29,7 +39,35 @@ const itemVariants = {
 };
 
 export default function Footer() {
+  const t = useTranslations('footer')
+  const locale = useLocale()
+  const router = useRouter()
+  const pathname = usePathname()
   const currentYear = new Date().getFullYear()
+
+  const languages = [
+    { code: 'pt', name: 'Português', flag: '🇧🇷' },
+    { code: 'en', name: 'English', flag: '🇺🇸' },
+    { code: 'es', name: 'Español', flag: '🇪🇸' }
+  ]
+
+  const handleLanguageChange = (newLocale: string) => {
+    let newPath = pathname
+    
+    // Remove current locale from path
+    if (pathname.startsWith(`/${locale}`)) {
+      newPath = pathname.slice(3) || '/'
+    }
+    
+    // Add new locale to path
+    if (newLocale === 'pt') {
+      router.push(newPath)
+    } else if (newLocale === 'en') {
+      router.push(`/us${newPath === '/' ? '' : newPath}`)
+    } else if (newLocale === 'es') {
+      router.push(`/es${newPath === '/' ? '' : newPath}`)
+    }
+  }
 
   return (
     <motion.footer 
@@ -40,6 +78,35 @@ export default function Footer() {
       variants={containerVariants}
     >
       <div className="container mx-auto px-4">
+        <motion.div 
+          className="flex justify-center mb-6"
+          variants={itemVariants}
+        >
+          <DropdownMenu>
+            <DropdownMenuTrigger asChild>
+              <Button variant="outline" size="sm" className="gap-2">
+                <Globe className="h-4 w-4" />
+                {t('language')}
+                <span className="ml-1">
+                  {languages.find(lang => lang.code === locale)?.flag}
+                </span>
+              </Button>
+            </DropdownMenuTrigger>
+            <DropdownMenuContent align="center">
+              {languages.map((language) => (
+                <DropdownMenuItem
+                  key={language.code}
+                  onClick={() => handleLanguageChange(language.code)}
+                  className="cursor-pointer"
+                >
+                  <span className="mr-2">{language.flag}</span>
+                  {language.name}
+                </DropdownMenuItem>
+              ))}
+            </DropdownMenuContent>
+          </DropdownMenu>
+        </motion.div>
+        
         <motion.div 
           className="flex justify-center space-x-6 mb-6"
           variants={itemVariants}
@@ -90,8 +157,8 @@ export default function Footer() {
           className="text-center text-sm"
           variants={itemVariants}
         >
-          <p>&copy; {currentYear} Paulo Rodrigues - Desenvolvedor FullStack</p>
-          <p>Todos os direitos reservados.</p>
+          <p>&copy; {currentYear} {t('copyright')}</p>
+          <p>{t('rights')}</p>
         </motion.div>
       </div>
     </motion.footer>

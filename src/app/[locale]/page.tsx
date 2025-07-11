@@ -14,9 +14,12 @@ import { Empresas } from "@/components/empresas/_components/empresas"
 import { Experiencias } from "@/components/experiencias/_components/experiencias"
 import Footer from "@/components/footer/_components/footer"
 import Contato from "@/components/contato/_components/contato"
+import { useTranslations } from 'next-intl'
 
 export default function Component() {
   const { theme, setTheme } = useTheme();
+  const t = useTranslations();
+  
   const toggleTheme = () => {
     setTheme(theme === "dark" ? "light" : "dark");
   };
@@ -32,16 +35,16 @@ export default function Component() {
         </Link>
         <nav className="hidden lg:flex max-w-fit inset-x-0 mx-auto border border-transparent dark:border-white/[0.2] rounded-full dark:bg-black bg-white shadow-[0px_2px_3px_-1px_rgba(0,0,0,0.1),0px_1px_0px_0px_rgba(25,28,33,0.02),0px_0px_0px_1px_rgba(25,28,33,0.08)] z-[9999] pr-2 pl-8 py-2 items-center justify-center space-x-4">
           <Link href="#" className="text-sm font-medium hover:underline underline-offset-4" prefetch={false}>
-            Início
+            {t('navigation.home')}
           </Link>
           <Link href="#servicos" className="text-sm font-medium hover:underline underline-offset-4" prefetch={false}>
-            Serviços
+            {t('navigation.services')}
           </Link>
           <Link href="#experiencias" className="text-sm font-medium hover:underline underline-offset-4" prefetch={false}>
-            Experiência
+            {t('navigation.experience')}
           </Link>
           <Link href="#contato" className="border text-sm font-medium relative border-neutral-200 dark:border-white/[0.2] text-black dark:text-white px-4 py-2 rounded-full">
-            <span>{"Contato"}</span>
+            <span>{t('navigation.contact')}</span>
             <span className="absolute inset-x-0 w-1/2 mx-auto -bottom-px bg-gradient-to-r from-transparent via-blue-500 to-transparent  h-px" />
             </Link>
         </nav>
@@ -62,16 +65,16 @@ export default function Component() {
           <SheetContent side="right" className="z-[9999]">
             <div className="grid gap-4 py-6">
               <Link href="#" className="flex items-center gap-2 text-lg font-medium" prefetch={false}>
-                Início
+                {t('navigation.home')}
               </Link>
               <Link href="#servicos" className="flex items-center gap-2 text-lg font-medium" prefetch={false}>
-              Serviços
+                {t('navigation.services')}
               </Link>
               <Link href="#experiencias" className="flex items-center gap-2 text-lg font-medium" prefetch={false}>
-                Experiência
+                {t('navigation.experience')}
               </Link>
               <Link href="#contato" className="flex items-center gap-2 text-lg font-medium" prefetch={false}>
-                Contato
+                {t('navigation.contact')}
               </Link>
               <Button variant="outline" size="icon" onClick={toggleTheme}>
                     <SunIcon className="h-[1.2rem] w-[1.2rem] rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0" />

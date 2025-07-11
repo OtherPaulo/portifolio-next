@@ -1,0 +1,138 @@
+{
+  "navigation": {
+    "home": "Inicio",
+    "services": "Servicios",
+    "experience": "Experiencia",
+    "contact": "Contacto"
+  },
+  "home": {
+    "greeting": "¡Hola, soy Paulo!",
+    "role": "Tu desarrollador",
+    "fullstack": "FullStack",
+    "web": "WEB",
+    "freelancer": "Freelancer"
+  },
+  "about": {
+    "title": "Sobre Mí",
+    "intro": "¡Hola! Soy <strong>Paulo Rodrigues</strong>, un desarrollador FullStack apasionado por la tecnología y la innovación. Con más de 3 años de experiencia en el desarrollo de soluciones web y móviles. Actualmente, trabajo como FullStack Developer en INNYX Educação y tengo el placer de transformar ideas en productos digitales que marcan la diferencia.",
+    "experience": "Mi experiencia incluye más de <strong>20 proyectos entregados</strong> como freelancer, trabajando con empresas de diversos segmentos y desarrollando desde landing pages hasta sistemas complejos de gestión y e-commerce.",
+    "linkBio": "Visita mi",
+    "linkBioText": "Link-Bio",
+    "linkBioDescription": "para seguir todos mis proyectos y novedades.",
+    "skills": "Habilidades"
+  },
+  "companies": {
+    "title": "Servicios Prestados",
+    "description": "Empresas que confiaron en mi trabajo para desarrollar sus soluciones digitales"
+  },
+  "experience": {
+    "title": "Experiencia Profesional",
+    "description": "Mi trayectoria como desarrollador, contribuyendo a proyectos innovadores y soluciones tecnológicas",
+    "responsibilities": "Principales responsabilidades:",
+    "current": "presente",
+    "fullTime": "Tiempo completo",
+    "freelance": "Freelance",
+    "remote": "Remoto",
+    "onSite": "Presencial",
+    "positions": {
+      "innyx": {
+        "title": "FullStack Developer",
+        "company": "INNYX Educação",
+        "period": "feb 2025 - presente · 6 meses",
+        "description": "Desarrollador FullStack Web & Mobile | Innyx Educação",
+        "details": "Actualmente trabajo como Desarrollador FullStack en Innyx Educação, contribuyendo activamente en la creación y mantenimiento de aplicaciones web y móviles escalables y de alto rendimiento. Trabajo diariamente con tecnologías como Vue.js, Next.js, PHP, Node.js, React Native (Expo) y Python, desarrollando soluciones completas, desde la concepción de nuevas funcionalidades hasta la entrega en producción.",
+        "responsibilities": [
+          "Desarrollo y mantenimiento de APIs RESTful e integraciones entre sistemas internos y externos.",
+          "Implementación de interfaces modernas y responsivas con enfoque en rendimiento y experiencia del usuario.",
+          "Aplicación de buenas prácticas de Clean Code y arquitectura de software para garantizar escalabilidad y facilidad de mantenimiento.",
+          "Actuación en conjunto con equipos de producto y diseño para entrega de soluciones eficientes y centradas en el usuario.",
+          "Soporte y mantenimiento continuo de sistemas internos y nuevos proyectos, siempre buscando optimizaciones.",
+          "Participación activa en revisiones de código, planificación de backlogs y mejoras continuas en el flujo de desarrollo."
+        ]
+      },
+      "encaixa": {
+        "title": "FullStack Developer",
+        "company": "Encaixa.ai",
+        "period": "ene 2024 - presente · 1 año 7 meses",
+        "description": "En Encaixa.ai, actúo como desarrollador responsable de transformar ideas en funcionalidades sólidas y eficientes, contribuyendo al desarrollo y evolución de una plataforma moderna y centrada en la experiencia del usuario.",
+        "responsibilities": [
+          "Creación y desarrollo de páginas web, enfocándose en rendimiento, responsividad y alineación con la identidad de la aplicación.",
+          "Implementación de reglas de negocio basadas en requisitos funcionales y técnicos, garantizando adherencia a los objetivos estratégicos del producto.",
+          "Integración de soluciones de pago en el backend, asegurando seguridad y fluidez en la experiencia de transacciones.",
+          "Desarrollo de APIs RESTful en Node.js, optimizadas para rendimiento y fácil mantenimiento.",
+          "Creación de endpoints dedicados a webhooks, permitiendo la comunicación eficaz entre sistemas externos e internos."
+        ]
+      },
+      "freelance": {
+        "title": "Desarrollador web freelancer",
+        "company": "Freelance",
+        "period": "mar 2022 - presente · 3 años 5 meses",
+        "description": "Actúo como desarrollador freelancer con más de 20 proyectos entregados con éxito, atendiendo clientes de diversos segmentos con soluciones personalizadas y eficientes. Mi experiencia va desde el desarrollo de aplicaciones completas desde cero hasta el mantenimiento y evolución de sistemas ya existentes, siempre con enfoque en rendimiento, usabilidad y escalabilidad.",
+        "details": "A lo largo de este viaje, trabajé con una amplia gama de tecnologías y stacks, adaptando la elección de herramientas a las necesidades específicas de cada proyecto. Entre ellas: JavaScript (Vue.js, React, Next.js), Node.js, PHP, Python, React Native, Expo, entre otras.",
+        "responsibilities": [
+          "Desarrollo end-to-end de sistemas web y móviles.",
+          "Creación de APIs, paneles administrativos, e-commerce, aplicaciones móviles y sistemas internos personalizados.",
+          "Atención directa al cliente, levantamiento de requisitos y seguimiento post-entrega.",
+          "Mantenimiento y optimización de aplicaciones legacy.",
+          "Aplicación de buenas prácticas de código limpio, versionado (Git), pruebas y seguridad.",
+          "Gestión autónoma de plazos, alcance y entrega de valor constante."
+        ]
+      },
+      "icts": {
+        "title": "Desarrollador web",
+        "company": "Grupo ICTS",
+        "period": "abr 2023 - abr 2024 · 1 año 1 mes",
+        "description": "Desarrollador Web | Grupo ICTS – Área de I+D",
+        "details": "Actué en el sector de Investigación y Desarrollo (I+D) del Grupo ICTS, contribuyendo directamente a la creación y evolución de soluciones web robustas y escalables. Trabajé con enfoque en innovación, calidad de entrega y buenas prácticas de desarrollo.",
+        "responsibilities": [
+          "Desarrollo de aplicaciones web utilizando los stacks Angular, Java y Node.js.",
+          "Creación y mantenimiento de APIs RESTful, garantizando integración fluida entre sistemas y alto rendimiento en las solicitudes.",
+          "Construcción de componentes reutilizables y modulares en Angular, promoviendo estandarización y reutilización de código en diferentes partes del sistema.",
+          "Utilización de base de datos PostgreSQL, versionado con Git y containerización con Docker.",
+          "Participación activa en squads multidisciplinarios, utilizando metodologías ágiles como Scrum y Kanban para organización, planificación y entregas continuas de valor.",
+          "Fuerte alineación con buenas prácticas de desarrollo, documentación y revisión de código."
+        ],
+        "conclusion": "Esta experiencia fue fundamental para mi crecimiento técnico y profesional, especialmente en contextos que exigen escalabilidad, colaboración en equipo e innovación constante."
+      }
+    }
+  },
+  "services": {
+    "title": "Tipos de Servicios",
+    "description": "Desarrollo soluciones completas para diferentes necesidades del negocio",
+    "saas": {
+      "title": "SaaS",
+      "description": "Aplicación completa"
+    },
+    "ecommerce": {
+      "title": "E-commerce",
+      "description": "Tienda Virtual"
+    },
+    "landingPage": {
+      "title": "Landing Page",
+      "description": "Página de ventas/Institucional"
+    }
+  },
+  "contact": {
+    "title": "Contactar vía WhatsApp",
+    "name": "Nombre",
+    "namePlaceholder": "Tu nombre",
+    "company": "Empresa",
+    "companyPlaceholder": "Nombre de la empresa",
+    "subject": "Asunto",
+    "subjectPlaceholder": "Asunto del mensaje",
+    "message": "Mensaje",
+    "messagePlaceholder": "Tu mensaje",
+    "submit": "Enviar Mensaje vía WhatsApp"
+  },
+  "chat": {
+    "hello": "Hola",
+    "question": "¿Qué necesitas?",
+    "placeholder": "¡Quiero hacer un presupuesto!",
+    "online": "En línea"
+  },
+  "footer": {
+    "copyright": "Paulo Rodrigues - Desarrollador FullStack",
+    "rights": "Todos los derechos reservados.",
+    "language": "Idioma"
+  }
+}

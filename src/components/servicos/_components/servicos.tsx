@@ -7,6 +7,7 @@ import Safari from "@/components/magicui/safari";
 import SafariLP from "@/components/magicui/safariLp";
 import SafariLyna from "@/components/magicui/safariLyna";
 import { BorderBeam } from "@/components/magicui/border-beam";
+import { useTranslations } from 'next-intl';
 
 const containerVariants = {
   hidden: { opacity: 0, y: 50 },
@@ -21,35 +22,37 @@ const containerVariants = {
 };
 
 export function Servicos() {
+  const t = useTranslations('services');
+  
   const tabs = [
     {
-      title: "SaaS",
+      title: t('saas.title'),
       value: "SaaS",
       content: (
         <div className="w-full overflow-hidden relative h-full rounded-2xl p-10 text-xl md:text-4xl font-bold text-white bg-[#0E0E10]">
-          <p className="mb-2">Aplicação completa</p>
+          <p className="mb-2">{t('saas.description')}</p>
           <Safari url="app.devpaulorodrigues.tech" className="size-full" />
           <BorderBeam size={250} duration={12} delay={9} />
         </div>
       ),
     },
     {
-      title: "Ecommerces",
+      title: t('ecommerce.title'),
       value: "Ecommerces",
       content: (
         <div className="w-full overflow-hidden relative h-full rounded-2xl p-10 text-xl md:text-4xl font-bold text-white bg-[#0E0E10]">
-          <p className="mb-2">Loja Virtual</p>
+          <p className="mb-2">{t('ecommerce.description')}</p>
           <SafariLyna url="lojalaganexa.com.br" className="size-full" />
           <BorderBeam size={250} duration={12} delay={9} />
         </div>
       ),
     },
     {
-      title: "Landing Page",
+      title: t('landingPage.title'),
       value: "Landing Page",
       content: (
         <div className="w-full overflow-hidden relative h-full rounded-2xl p-10 text-xl md:text-4xl font-bold text-white bg-[#0E0E10]">
-          <p className="mb-2">Página de vendas/Institucional</p>
+          <p className="mb-2">{t('landingPage.description')}</p>
           <SafariLP url="Encaixa.ai" className="size-full" />
           <BorderBeam size={250} duration={12} delay={9} />
         </div>
@@ -71,10 +74,10 @@ export function Servicos() {
         variants={containerVariants}
       >
         <h2 className="text-2xl md:text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-b from-neutral-800 via-neutral-700 to-neutral-700 dark:from-neutral-800 dark:via-white dark:to-white mb-4">
-          Tipos de Serviços
+          {t('title')}
         </h2>
         <p className="text-lg text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
-          Desenvolvo soluções completas para diferentes necessidades do seu negócio
+          {t('description')}
         </p>
       </motion.div>
       
