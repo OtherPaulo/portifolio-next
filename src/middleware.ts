@@ -9,6 +9,7 @@ export default createMiddleware({
 
   // Map specific paths to locales
   pathnames: {
+    '/': '/',
     '/us': '/en',
     '/es': '/es'
   }
@@ -16,5 +17,5 @@ export default createMiddleware({
 
 export const config = {
   // Match only internationalized pathnames
-  matcher: ['/', '/(pt|us|es)/:path*', '/us', '/es']
+  matcher: ['/', '/(pt|en|es)/:path*', '/us', '/es']
 };
