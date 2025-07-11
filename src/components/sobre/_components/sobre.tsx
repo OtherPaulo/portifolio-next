@@ -3,7 +3,6 @@ import { motion } from "framer-motion";
 import { BackgroundGradient } from "@/components/ui/background-gradient";
 import { LinkPreview } from "@/components/ui/link-preview";
 import Image from "next/image";
-import { useTranslations } from 'next-intl';
 
 const containerVariants = {
   hidden: { opacity: 0 },
@@ -28,8 +27,6 @@ const itemVariants = {
 };
 
 export function Sobre() {
-  const t = useTranslations('about');
-  
   return (
     <motion.section 
       id="sobre"
@@ -47,34 +44,41 @@ export function Sobre() {
           <motion.p 
             className="text-neutral-500 dark:text-neutral-400 text-lg md:text-xl max-w-3xl mx-auto mb-6"
             variants={itemVariants}
-            dangerouslySetInnerHTML={{ __html: t('intro') }}
-          />
+          >
+            Olá! Sou <strong className="text-neutral-800 dark:text-white">Paulo Rodrigues</strong>, 
+            um desenvolvedor FullStack apaixonado por tecnologia e inovação. Com mais de 3 anos de experiência 
+            no desenvolvimento de soluções web e mobile. Atualmente, trabalho como FullStack Developer na INNYX Educação e tenho o prazer de transformar ideias em produtos digitais 
+            que fazem a diferença.
+          </motion.p>
           
           <motion.p 
             className="text-neutral-500 dark:text-neutral-400 text-lg md:text-xl max-w-3xl mx-auto mb-6"
             variants={itemVariants}
-            dangerouslySetInnerHTML={{ __html: t('experience') }}
-          />
+          >
+            Minha experiência inclui mais de <strong>20 projetos entregues</strong> como freelancer, 
+            trabalhando com empresas de diversos segmentos e desenvolvendo desde landing pages até 
+            sistemas complexos de gestão e e-commerce.
+          </motion.p>
           
           <motion.p 
             className="text-neutral-500 dark:text-neutral-400 text-lg md:text-xl max-w-3xl mx-auto"
             variants={itemVariants}
           >
-            {t('linkBio')}{" "}
+            Visite meu{" "}
             <LinkPreview
               url="https://link-bio-paulo.netlify.app/"
               className="font-bold"
             >
-              {t('linkBioText')}
+              Link-Bio
             </LinkPreview>{" "}
-            {t('linkBioDescription')}
+            para acompanhar todos os meus projetos e novidades.
           </motion.p>
 
           <motion.p 
             className="text-2xl font-bold mt-4 mb-4 flex justify-center items-center"
             variants={itemVariants}
           >
-            {t('skills')}
+            Habilidades
           </motion.p>
           
           <motion.div 

@@ -2,12 +2,86 @@
 
 import { motion } from "framer-motion";
 import { Calendar, MapPin, Building } from "lucide-react";
-import { useTranslations } from 'next-intl';
 
+const experiencias = [
+  {
+    id: 1,
+    cargo: "FullStack Developer",
+    empresa: "INNYX Educação",
+    periodo: "fev de 2025 - o momento · 6 meses",
+    tipo: "Tempo integral",
+    localizacao: "Presencial",
+    logo: "https://media.licdn.com/dms/image/v2/D4D0BAQGCzqxbCCSIkw/company-logo_100_100/company-logo_100_100/0/1689078459851/innyxtecnologia_logo?e=1756944000&v=beta&t=hv6m_Is4Lsho4G9_a6zBPLsIbLHf7ZaVp2MwAzodLzA", // Você pode adicionar o logo se tiver
+    descricao: "Desenvolvedor Fullstack Web & Mobile | Innyx Educação",
+    detalhes: "Atualmente atuo como Desenvolvedor Fullstack na Innyx Educação, contribuindo ativamente na criação e manutenção de aplicações web e mobile escaláveis e de alta performance. Trabalho diariamente com tecnologias como Vue.js, Next.js, PHP, Node.js, React Native (Expo) e Python, desenvolvendo soluções completas, desde a concepção de novas features até a entrega em produção.",
+    responsabilidades: [
+      "Desenvolvimento e manutenção de APIs RESTful e integrações entre sistemas internos e externos.",
+      "Implementação de interfaces modernas e responsivas com foco em performance e experiência do usuário.",
+      "Aplicação de boas práticas de Clean Code e arquitetura de software para garantir escalabilidade e facilidade de manutenção.",
+      "Atuação em conjunto com time de produto e design para entrega de soluções eficientes e centradas no usuário.",
+      "Suporte e manutenção contínua de sistemas internos e novos projetos, sempre buscando otimizações.",
+      "Participação ativa em code reviews, planejamento de backlogs e melhorias contínuas no fluxo de desenvolvimento."
+    ]
+  },
+  {
+    id: 2,
+    cargo: "FullStack Developer",
+    empresa: "Encaixa.ai",
+    periodo: "jan de 2024 - o momento · 1 ano 7 meses",
+    tipo: "Tempo integral",
+    localizacao: "Remota",
+    logo: "https://media.licdn.com/dms/image/v2/D4D0BAQGJl1c-3B42-Q/company-logo_100_100/company-logo_100_100/0/1710792237459?e=1756944000&v=beta&t=CyO13IthICcZYRp_At7w-o8pJghPWFwtxB2IW9gKyO8",
+    descricao: "Na Encaixa.ai, atuo como desenvolvedor responsável por transformar ideias em funcionalidades sólidas e eficientes, contribuindo para o desenvolvimento e evolução de uma plataforma moderna e centrada na experiência do usuário.",
+    responsabilidades: [
+      "Criação e desenvolvimento de páginas web, focando em performance, responsividade e alinhamento com a identidade da aplicação.",
+      "Implementação de regras de negócio com base nos requisitos funcionais e técnicos, garantindo aderência aos objetivos estratégicos do produto.",
+      "Integração de soluções de pagamento no backend, assegurando segurança e fluidez na experiência de transações.",
+      "Desenvolvimento de APIs RESTful em Node.js, otimizadas para performance e fácil manutenção.",
+      "Criação de endpoints dedicados a webhooks, permitindo a comunicação eficaz entre sistemas externos e internos."
+    ]
+  },
+  {
+    id: 3,
+    cargo: "Desenvolvedor web freelancer",
+    empresa: "Freelance",
+    periodo: "mar de 2022 - o momento · 3 anos 5 meses",
+    tipo: "Freelance",
+    localizacao: "Remota",
+    logo: "https://cdn-icons-png.flaticon.com/512/9495/9495859.png", // Você pode adicionar um ícone genérico
+    descricao: "Atuo como desenvolvedor freelancer com mais de 20 projetos entregues com sucesso, atendendo clientes de diversos segmentos com soluções personalizadas e eficientes. Minha experiência vai desde o desenvolvimento de aplicações completas do zero até a manutenção e evolução de sistemas já existentes, sempre com foco em performance, usabilidade e escalabilidade.",
+    detalhes: "Ao longo dessa jornada, trabalhei com uma ampla gama de tecnologias e stacks, adaptando a escolha das ferramentas às necessidades específicas de cada projeto. Entre elas: JavaScript (Vue.js, React, Next.js), Node.js, PHP, Python, React Native, Expo, entre outras.",
+    responsabilidades: [
+      "Desenvolvimento end-to-end de sistemas web e mobile.",
+      "Criação de APIs, painéis administrativos, e-commerce, aplicativos mobile e sistemas internos personalizados.",
+      "Atendimento direto ao cliente, levantamento de requisitos e acompanhamento pós-entrega.",
+      "Manutenção e otimização de aplicações legadas.",
+      "Aplicação de boas práticas de código limpo, versionamento (Git), testes e segurança.",
+      "Gestão autônoma de prazos, escopo e entrega de valor constante."
+    ]
+  },
+  {
+    id: 4,
+    cargo: "Desenvolvedor web",
+    empresa: "Grupo ICTS",
+    periodo: "abr de 2023 - abr de 2024 · 1 ano 1 mês",
+    tipo: "Presencial",
+    localizacao: "Manaus, Amazonas, Brasil",
+    logo: "https://firebasestorage.googleapis.com/v0/b/encaixa-ai.appspot.com/o/logo-icts.jpg?alt=media&token=d42e5f7e-8708-4518-b46c-965b5f205d63",
+    descricao: "Desenvolvedor Web | Grupo ICTS – Área de P&D",
+    detalhes: "Atuei no setor de Pesquisa e Desenvolvimento (P&D) do Grupo ICTS, contribuindo diretamente para a criação e evolução de soluções web robustas e escaláveis. Trabalhei com foco em inovação, qualidade de entrega e boas práticas de desenvolvimento.",
+    responsabilidades: [
+      "Desenvolvimento de aplicações web utilizando as stacks Angular, Java e Node.js.",
+      "Criação e manutenção de APIs RESTful, garantindo integração fluida entre sistemas e alta performance nas requisições.",
+      "Construção de componentes reutilizáveis e modulares em Angular, promovendo padronização e reuso de código em diferentes partes do sistema.",
+      "Utilização de banco de dados PostgreSQL, versionamento com Git e conteinerização com Docker.",
+      "Participação ativa em squads multidisciplinares, utilizando metodologias ágeis como Scrum e Kanban para organização, planejamento e entregas contínuas de valor.",
+      "Forte alinhamento com boas práticas de desenvolvimento, documentação e revisão de código."
+    ],
+    conclusao: "Essa experiência foi fundamental para o meu crescimento técnico e profissional, especialmente em contextos que exigem escalabilidade, colaboração em equipe e inovação constante."
+  }
+];
 
 const ExperienceCard = ({ experiencia, index }: { experiencia: any; index: number }) => {
-  const t = useTranslations('experience');
-  
   return (
     <motion.div
       initial={{ opacity: 0, y: 50 }}
@@ -52,27 +126,27 @@ const ExperienceCard = ({ experiencia, index }: { experiencia: any; index: numbe
             )}
             
             <span className="px-2 py-1 bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 rounded-full text-xs">
-              {t(experiencia.tipo)}
+              {experiencia.tipo}
             </span>
           </div>
           
           <p className="text-gray-700 dark:text-gray-300 mb-4 leading-relaxed">
-            {experiencia.description}
+            {experiencia.descricao}
           </p>
           
-          {experiencia.details && (
+          {experiencia.detalhes && (
             <p className="text-gray-600 dark:text-gray-400 mb-4 text-sm leading-relaxed">
-              {experiencia.details}
+              {experiencia.detalhes}
             </p>
           )}
           
-          {experiencia.responsibilities && (
+          {experiencia.responsabilidades && (
             <div className="space-y-2">
               <h4 className="font-semibold text-gray-900 dark:text-white text-sm">
-                {t('responsibilities')}
+                Principais responsabilidades:
               </h4>
               <ul className="space-y-1">
-                {experiencia.responsibilities.map((resp: string, idx: number) => (
+                {experiencia.responsabilidades.map((resp: string, idx: number) => (
                   <li key={idx} className="text-sm text-gray-600 dark:text-gray-400 flex items-start gap-2">
                     <span className="w-1.5 h-1.5 bg-blue-500 rounded-full mt-2 flex-shrink-0"></span>
                     <span>{resp}</span>
@@ -82,9 +156,9 @@ const ExperienceCard = ({ experiencia, index }: { experiencia: any; index: numbe
             </div>
           )}
           
-          {experiencia.conclusion && (
+          {experiencia.conclusao && (
             <p className="text-gray-600 dark:text-gray-400 mt-4 text-sm italic">
-              {experiencia.conclusion}
+              {experiencia.conclusao}
             </p>
           )}
         </div>
@@ -94,68 +168,15 @@ const ExperienceCard = ({ experiencia, index }: { experiencia: any; index: numbe
 };
 
 export function Experiencias() {
-  const t = useTranslations('experience');
-  
-  const experiencias = [
-    {
-      id: 1,
-      cargo: t('positions.innyx.title'),
-      empresa: t('positions.innyx.company'),
-      periodo: t('positions.innyx.period'),
-      tipo: 'fullTime',
-      localizacao: t('onSite'),
-      logo: "https://media.licdn.com/dms/image/v2/D4D0BAQGCzqxbCCSIkw/company-logo_100_100/company-logo_100_100/0/1689078459851/innyxtecnologia_logo?e=1756944000&v=beta&t=hv6m_Is4Lsho4G9_a6zBPLsIbLHf7ZaVp2MwAzodLzA",
-      description: t('positions.innyx.description'),
-      details: t('positions.innyx.details'),
-      responsibilities: t.raw('positions.innyx.responsibilities')
-    },
-    {
-      id: 2,
-      cargo: t('positions.encaixa.title'),
-      empresa: t('positions.encaixa.company'),
-      periodo: t('positions.encaixa.period'),
-      tipo: 'fullTime',
-      localizacao: t('remote'),
-      logo: "https://media.licdn.com/dms/image/v2/D4D0BAQGJl1c-3B42-Q/company-logo_100_100/company-logo_100_100/0/1710792237459?e=1756944000&v=beta&t=CyO13IthICcZYRp_At7w-o8pJghPWFwtxB2IW9gKyO8",
-      description: t('positions.encaixa.description'),
-      responsibilities: t.raw('positions.encaixa.responsibilities')
-    },
-    {
-      id: 3,
-      cargo: t('positions.freelance.title'),
-      empresa: t('positions.freelance.company'),
-      periodo: t('positions.freelance.period'),
-      tipo: 'freelance',
-      localizacao: t('remote'),
-      logo: "https://cdn-icons-png.flaticon.com/512/9495/9495859.png",
-      description: t('positions.freelance.description'),
-      details: t('positions.freelance.details'),
-      responsibilities: t.raw('positions.freelance.responsibilities')
-    },
-    {
-      id: 4,
-      cargo: t('positions.icts.title'),
-      empresa: t('positions.icts.company'),
-      periodo: t('positions.icts.period'),
-      tipo: 'fullTime',
-      localizacao: "Manaus, Amazonas, Brasil",
-      logo: "https://firebasestorage.googleapis.com/v0/b/encaixa-ai.appspot.com/o/logo-icts.jpg?alt=media&token=d42e5f7e-8708-4518-b46c-965b5f205d63",
-      description: t('positions.icts.description'),
-      details: t('positions.icts.details'),
-      responsibilities: t.raw('positions.icts.responsibilities'),
-      conclusion: t('positions.icts.conclusion')
-    }
-  ];
-  
   return (
     <section id="experiencias" className="w-full py-16 px-4">
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-b from-neutral-800 via-neutral-700 to-neutral-700 dark:from-neutral-800 dark:via-white dark:to-white mb-4">
-            {t('title')}
+            Experiência Profissional
           </h2>
           <p className="text-lg text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
-            {t('description')}
+            Minha jornada como desenvolvedor, contribuindo para projetos inovadores e soluções tecnológicas
           </p>
         </div>
         

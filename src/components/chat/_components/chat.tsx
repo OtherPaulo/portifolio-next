@@ -2,10 +2,8 @@
 
 import { useState, useEffect } from 'react'
 import { X, SendHorizontal } from 'lucide-react'
-import { useTranslations } from 'next-intl'
 
 export default function Chat() {
-  const t = useTranslations('chat')
   const [isOpen, setIsOpen] = useState(false)
   const [message, setMessage] = useState('')
   const [currentTime, setCurrentTime] = useState('')
@@ -58,7 +56,7 @@ export default function Chat() {
               </div>
               <div>
                 <h3 className="text-white font-semibold">Paulo</h3>
-                <p className="text-emerald-200 text-sm">{t('online')}</p>
+                <p className="text-emerald-200 text-sm">Online</p>
               </div>
             </div>
             <button 
@@ -78,10 +76,10 @@ export default function Chat() {
           >
               <div className="bg-white p-2 text-black dark:text-black rounded-lg shadow mb-2 max-w-[80%] flex justify-between">
                 <div className="flex items-center space-x-1">
-                  <p>{t('hello')}</p>
+                  <p>Olá</p>
                   <img 
                   src="/emoji.svg" 
-                  alt="Emoji Hello" 
+                  alt="Emoji Olá" 
                   className="w-6 h-6" 
                   />
                 </div>
@@ -90,7 +88,7 @@ export default function Chat() {
 
             {showFirstMessage && (
               <div className="bg-white p-2 text-black dark:text-black rounded-lg shadow mb-2 max-w-[80%] flex justify-between">
-                <p>{t('question')}</p>
+                <p>Do que você precisa?</p>
                 <span className="text-xs mt-4 text-gray-500 dark:text-gray-400">{currentTime}</span>
               </div>
             )}
@@ -101,14 +99,14 @@ export default function Chat() {
                   type="text"
                   value={message}
                   onChange={(e) => setMessage(e.target.value)}
-                  placeholder={t('placeholder')}
+                  placeholder="Quero fechar um orçamento!"
                   className="flex-grow p-2 rounded-full focus:outline-none focus:ring-2 focus:ring-emerald-500 dark:bg-white dark:text-black dark:border-gray-600 placeholder:text-left placeholder:whitespace-pre-line"
-                  aria-label={t('placeholder')}
+                  aria-label="Digite sua mensagem"
                 />
                 <button
                   type="submit"
                   className="bg-emerald-500 text-white p-2 rounded-full hover:bg-emerald-600 focus:outline-none focus:ring-2 focus:ring-emerald-500"
-                  aria-label={t('submit')}
+                  aria-label="Enviar mensagem"
                 >
                   <SendHorizontal className="w-5 h-5" />
                 </button>
@@ -120,7 +118,7 @@ export default function Chat() {
       <button
         onClick={toggleChat}
         className="bg-emerald-500 text-white p-4 rounded-full shadow-lg hover:bg-emerald-600 focus:outline-none focus:ring-2 focus:ring-emercel-500"
-        aria-label={isOpen ? "Close chat" : "Open chat"}
+        aria-label={isOpen ? "Fechar chat" : "Abrir chat"}
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"
