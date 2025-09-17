@@ -8,7 +8,7 @@ const experiencias = [
     id: 1,
     cargo: "Desenvolvedor Fullstack C-LEVEL",
     empresa: "Enablers Solutions",
-    periodo: "ago de 2025 - o momento · 5 meses",
+    periodo: "ago de 2025 - o momento · 2 meses",
     tipo: "Tempo integral",
     localizacao: "Remota",
     logo: "https://media.licdn.com/dms/image/v2/C510BAQG2iuSAzNs49g/company-logo_200_200/company-logo_200_200/0/1631300625580?e=2147483647&v=beta&t=YMzukjljmz9h1LVFoThHpBUf3cfg6p6MUCcawoIzctc",
@@ -25,7 +25,7 @@ const experiencias = [
     id: 2,
     cargo: "FullStack Developer",
     empresa: "INNYX Educação",
-    periodo: "fev de 2025 - o momento · 6 meses",
+    periodo: "fev de 2025 - o momento · 7 meses",
     tipo: "Tempo integral",
     localizacao: "Presencial",
     logo: "https://media.licdn.com/dms/image/v2/D4D0BAQGCzqxbCCSIkw/company-logo_100_100/company-logo_100_100/0/1689078459851/innyxtecnologia_logo?e=1756944000&v=beta&t=hv6m_Is4Lsho4G9_a6zBPLsIbLHf7ZaVp2MwAzodLzA", // Você pode adicionar o logo se tiver
