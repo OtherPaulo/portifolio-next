@@ -11,7 +11,7 @@ const experiencias = [
     periodo: "ago de 2025 - o momento · 2 meses",
     tipo: "Tempo integral",
     localizacao: "Remota",
-    logo: "https://media.licdn.com/dms/image/v2/C510BAQG2iuSAzNs49g/company-logo_200_200/company-logo_200_200/0/1631300625580?e=2147483647&v=beta&t=YMzukjljmz9h1LVFoThHpBUf3cfg6p6MUCcawoIzctc",
+    logo: "https://firebasestorage.googleapis.com/v0/b/encaixa-ai.appspot.com/o/logo%20enablers.jpg?alt=media&token=edab92fa-1073-420e-96dd-2c7e2ee2b172",
     descricao: "Atuação como Desenvolvedor Full Stack na Enablers Solutions, contribuindo ativamente no desenvolvimento de um sistema de rastreamento multifunções integrado a dispositivos IoT. Minha atuação envolve desde a arquitetura até a entrega de soluções robustas e escaláveis, utilizando o conceito de multi-tenancy para suportar múltiplas organizações dentro da mesma plataforma.",
     responsabilidades: [
       "Implementação de mapas interativos com visualização em tempo real de dispositivos IoT.",
