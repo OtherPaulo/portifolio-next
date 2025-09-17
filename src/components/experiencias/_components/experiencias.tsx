@@ -6,6 +6,23 @@ import { Calendar, MapPin, Building } from "lucide-react";
 const experiencias = [
   {
     id: 1,
+    cargo: "Desenvolvedor Fullstack C-LEVEL",
+    empresa: "Enablers Solutions",
+    periodo: "ago de 2025 - o momento · 5 meses",
+    tipo: "Tempo integral",
+    localizacao: "Remota",
+    logo: "https://media.licdn.com/dms/image/v2/C510BAQG2iuSAzNs49g/company-logo_200_200/company-logo_200_200/0/1631300625580?e=2147483647&v=beta&t=YMzukjljmz9h1LVFoThHpBUf3cfg6p6MUCcawoIzctc",
+    descricao: "Atuação como Desenvolvedor Full Stack na Enablers Solutions, contribuindo ativamente no desenvolvimento de um sistema de rastreamento multifunções integrado a dispositivos IoT. Minha atuação envolve desde a arquitetura até a entrega de soluções robustas e escaláveis, utilizando o conceito de multi-tenancy para suportar múltiplas organizações dentro da mesma plataforma.",
+    responsabilidades: [
+      "Implementação de mapas interativos com visualização em tempo real de dispositivos IoT.",
+      "Liderança na conversão de biblioteca legada de JavaScript para TypeScript, aumentando a segurança e performance da aplicação.",
+      "Aceleração do desenvolvimento colaborativo e integração com novos sistemas.",
+      "Melhoria contínua da stack com foco em Clean Code, testes automatizados, CI/CD e arquitetura de microsserviços.",
+      "Atuação focada em performance, escalabilidade e alinhamento com as necessidades de negócio e experiência do usuário."
+    ]
+  },
+  {
+    id: 2,
     cargo: "FullStack Developer",
     empresa: "INNYX Educação",
     periodo: "fev de 2025 - o momento · 6 meses",
@@ -24,7 +41,7 @@ const experiencias = [
     ]
   },
   {
-    id: 2,
+    id: 3,
     cargo: "FullStack Developer",
     empresa: "Encaixa.ai",
     periodo: "jan de 2024 - o momento · 1 ano 7 meses",
@@ -41,7 +58,7 @@ const experiencias = [
     ]
   },
   {
-    id: 3,
+    id: 4,
     cargo: "Desenvolvedor web freelancer",
     empresa: "Freelance",
     periodo: "mar de 2022 - o momento · 3 anos 5 meses",
@@ -60,7 +77,7 @@ const experiencias = [
     ]
   },
   {
-    id: 4,
+    id: 5,
     cargo: "Desenvolvedor web",
     empresa: "Grupo ICTS",
     periodo: "abr de 2023 - abr de 2024 · 1 ano 1 mês",
