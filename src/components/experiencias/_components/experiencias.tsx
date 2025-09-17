@@ -28,7 +28,7 @@ const experiencias = [
     periodo: "fev de 2025 - o momento · 7 meses",
     tipo: "Tempo integral",
     localizacao: "Presencial",
-    logo: "https://media.licdn.com/dms/image/v2/D4D0BAQGCzqxbCCSIkw/company-logo_100_100/company-logo_100_100/0/1689078459851/innyxtecnologia_logo?e=1756944000&v=beta&t=hv6m_Is4Lsho4G9_a6zBPLsIbLHf7ZaVp2MwAzodLzA", // Você pode adicionar o logo se tiver
+    logo: "https://firebasestorage.googleapis.com/v0/b/encaixa-ai.appspot.com/o/innyxtecnologia_logo.jpg?alt=media&token=15f882e4-7dbe-445b-89ec-da57ba762c63", // Você pode adicionar o logo se tiver
     descricao: "Desenvolvedor Fullstack Web & Mobile | Innyx Educação",
     detalhes: "Atualmente atuo como Desenvolvedor Fullstack na Innyx Educação, contribuindo ativamente na criação e manutenção de aplicações web e mobile escaláveis e de alta performance. Trabalho diariamente com tecnologias como Vue.js, Next.js, PHP, Node.js, React Native (Expo) e Python, desenvolvendo soluções completas, desde a concepção de novas features até a entrega em produção.",
     responsabilidades: [
@@ -47,7 +47,7 @@ const experiencias = [
     periodo: "jan de 2024 - o momento · 1 ano 7 meses",
     tipo: "Tempo integral",
     localizacao: "Remota",
-    logo: "https://media.licdn.com/dms/image/v2/D4D0BAQGJl1c-3B42-Q/company-logo_100_100/company-logo_100_100/0/1710792237459?e=1756944000&v=beta&t=CyO13IthICcZYRp_At7w-o8pJghPWFwtxB2IW9gKyO8",
+    logo: "https://firebasestorage.googleapis.com/v0/b/encaixa-ai.appspot.com/o/logo%20encaixa%20ai.jpg?alt=media&token=3970223b-db85-41e8-988b-b1bf9372ebd0",
     descricao: "Na Encaixa.ai, atuo como desenvolvedor responsável por transformar ideias em funcionalidades sólidas e eficientes, contribuindo para o desenvolvimento e evolução de uma plataforma moderna e centrada na experiência do usuário.",
     responsabilidades: [
       "Criação e desenvolvimento de páginas web, focando em performance, responsividade e alinhamento com a identidade da aplicação.",
