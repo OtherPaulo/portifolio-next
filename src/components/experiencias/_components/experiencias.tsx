@@ -3,14 +3,81 @@
 import { motion } from "framer-motion";
 import { Calendar, MapPin, Building } from "lucide-react";
 
-const experiencias = [
+// Função para calcular a duração entre duas datas
+const calcularDuracao = (dataInicio: string): string => {
+  const meses = [
+    'jan', 'fev', 'mar', 'abr', 'mai', 'jun',
+    'jul', 'ago', 'set', 'out', 'nov', 'dez'
+  ];
+  
+  // Parse da data de início (formato: "ago de 2025")
+  const [mesInicio, , anoInicio] = dataInicio.split(' ');
+  const mesIndex = meses.indexOf(mesInicio.toLowerCase());
+  
+  if (mesIndex === -1) return dataInicio;
+  
+  const dataInicioObj = new Date(parseInt(anoInicio), mesIndex);
+  const dataAtual = new Date();
+  
+  const diffEmMeses = (dataAtual.getFullYear() - dataInicioObj.getFullYear()) * 12 + 
+                     (dataAtual.getMonth() - dataInicioObj.getMonth());
+  
+  if (diffEmMeses < 1) {
+    return `${dataInicio} - o momento · 1 mês`;
+  } else if (diffEmMeses < 12) {
+    return `${dataInicio} - o momento · ${diffEmMeses} ${diffEmMeses === 1 ? 'mês' : 'meses'}`;
+  } else {
+    const anos = Math.floor(diffEmMeses / 12);
+    const mesesRestantes = diffEmMeses % 12;
+    
+    if (mesesRestantes === 0) {
+      return `${dataInicio} - o momento · ${anos} ${anos === 1 ? 'ano' : 'anos'}`;
+    } else {
+      return `${dataInicio} - o momento · ${anos} ${anos === 1 ? 'ano' : 'anos'} ${mesesRestantes} ${mesesRestantes === 1 ? 'mês' : 'meses'}`;
+    }
+  }
+};
+
+// Função para processar os dados das experiências
+const processarExperiencias = (experiencias: any[]) => {
+  return experiencias.map(exp => {
+    // Se o período contém "o momento", recalcula a duração
+    if (exp.periodo && exp.periodo.includes('o momento')) {
+      const dataInicio = exp.periodo.split(' - ')[0];
+      const novoPeriodo = calcularDuracao(dataInicio);
+      
+      return {
+        ...exp,
+        periodo: novoPeriodo
+      };
+    }
+    
+    // Se tem cargo anterior, também processa ele
+    if (exp.cargoAnterior && exp.cargoAnterior.periodo && exp.cargoAnterior.periodo.includes('o momento')) {
+      const dataInicioAnterior = exp.cargoAnterior.periodo.split(' - ')[0];
+      const novoPeriodoAnterior = calcularDuracao(dataInicioAnterior);
+      
+      return {
+        ...exp,
+        cargoAnterior: {
+          ...exp.cargoAnterior,
+          periodo: novoPeriodoAnterior
+        }
+      };
+    }
+    
+    return exp;
+  });
+};
+
+const experienciasBase = [
   {
     id: 1,
     cargo: "Desenvolvedor Fullstack C-LEVEL",
     empresa: "Enablers Solutions",
-    periodo: "ago de 2025 - o momento · 2 meses",
+    periodo: "ago de 2025 - o momento",
     tipo: "Tempo integral",
-    localizacao: "Remota",
+    localizacao: "Presencial",
     logo: "https://firebasestorage.googleapis.com/v0/b/encaixa-ai.appspot.com/o/logo%20enablers.jpg?alt=media&token=edab92fa-1073-420e-96dd-2c7e2ee2b172",
     descricao: "Atuação como Desenvolvedor Full Stack na Enablers Solutions, contribuindo ativamente no desenvolvimento de um sistema de rastreamento multifunções integrado a dispositivos IoT. Minha atuação envolve desde a arquitetura até a entrega de soluções robustas e escaláveis, utilizando o conceito de multi-tenancy para suportar múltiplas organizações dentro da mesma plataforma.",
     responsabilidades: [
@@ -23,28 +90,42 @@ const experiencias = [
   },
   {
     id: 2,
-    cargo: "FullStack Developer",
+    cargo: "Consultor de Software",
     empresa: "INNYX Educação",
-    periodo: "fev de 2025 - o momento · 7 meses",
+    periodo: "ago de 2025 - o momento",
     tipo: "Tempo integral",
-    localizacao: "Presencial",
-    logo: "https://firebasestorage.googleapis.com/v0/b/encaixa-ai.appspot.com/o/innyxtecnologia_logo.jpg?alt=media&token=15f882e4-7dbe-445b-89ec-da57ba762c63", // Você pode adicionar o logo se tiver
-    descricao: "Desenvolvedor Fullstack Web & Mobile | Innyx Educação",
-    detalhes: "Atualmente atuo como Desenvolvedor Fullstack na Innyx Educação, contribuindo ativamente na criação e manutenção de aplicações web e mobile escaláveis e de alta performance. Trabalho diariamente com tecnologias como Vue.js, Next.js, PHP, Node.js, React Native (Expo) e Python, desenvolvendo soluções completas, desde a concepção de novas features até a entrega em produção.",
+    localizacao: "Remota",
+    logo: "https://firebasestorage.googleapis.com/v0/b/encaixa-ai.appspot.com/o/innyxtecnologia_logo.jpg?alt=media&token=15f882e4-7dbe-445b-89ec-da57ba762c63",
+    descricao: "Consultor de Software | Innyx Educação",
+    detalhes: "Atualmente atuo como Consultor de Software na Innyx Educação, oferecendo expertise técnica e estratégica para otimização de processos de desenvolvimento, arquitetura de software e implementação de melhores práticas. Contribuo para a evolução tecnológica da empresa através de consultoria especializada em desenvolvimento web e mobile.",
+    cargoAnterior: {
+      cargo: "FullStack Developer",
+      periodo: "fev de 2025 - ago de 2025",
+      descricao: "Desenvolvedor Fullstack Web & Mobile | Innyx Educação",
+      detalhes: "Atuei como Desenvolvedor Fullstack na Innyx Educação, contribuindo ativamente na criação e manutenção de aplicações web e mobile escaláveis e de alta performance. Trabalhei diariamente com tecnologias como Vue.js, Next.js, PHP, Node.js, React Native (Expo) e Python, desenvolvendo soluções completas, desde a concepção de novas features até a entrega em produção.",
+      responsabilidades: [
+        "Desenvolvimento e manutenção de APIs RESTful e integrações entre sistemas internos e externos.",
+        "Implementação de interfaces modernas e responsivas com foco em performance e experiência do usuário.",
+        "Aplicação de boas práticas de Clean Code e arquitetura de software para garantir escalabilidade e facilidade de manutenção.",
+        "Atuação em conjunto com time de produto e design para entrega de soluções eficientes e centradas no usuário.",
+        "Suporte e manutenção contínua de sistemas internos e novos projetos, sempre buscando otimizações.",
+        "Participação ativa em code reviews, planejamento de backlogs e melhorias contínuas no fluxo de desenvolvimento."
+      ]
+    },
     responsabilidades: [
-      "Desenvolvimento e manutenção de APIs RESTful e integrações entre sistemas internos e externos.",
-      "Implementação de interfaces modernas e responsivas com foco em performance e experiência do usuário.",
-      "Aplicação de boas práticas de Clean Code e arquitetura de software para garantir escalabilidade e facilidade de manutenção.",
-      "Atuação em conjunto com time de produto e design para entrega de soluções eficientes e centradas no usuário.",
-      "Suporte e manutenção contínua de sistemas internos e novos projetos, sempre buscando otimizações.",
-      "Participação ativa em code reviews, planejamento de backlogs e melhorias contínuas no fluxo de desenvolvimento."
+      "Consultoria técnica para otimização de arquiteturas de software e processos de desenvolvimento.",
+      "Análise e recomendação de tecnologias e ferramentas para melhorar performance e escalabilidade dos sistemas.",
+      "Mentoria técnica para equipes de desenvolvimento, compartilhando conhecimento e boas práticas.",
+      "Avaliação e sugestão de melhorias em código legado e implementação de padrões de qualidade.",
+      "Consultoria em estratégias de integração entre sistemas e APIs para otimizar fluxos de trabalho.",
+      "Participação em planejamento estratégico de tecnologia e definição de roadmaps técnicos."
     ]
   },
   {
     id: 3,
     cargo: "FullStack Developer",
     empresa: "Encaixa.ai",
-    periodo: "jan de 2024 - o momento · 1 ano 7 meses",
+    periodo: "jan de 2024 - o momento",
     tipo: "Tempo integral",
     localizacao: "Remota",
     logo: "https://firebasestorage.googleapis.com/v0/b/encaixa-ai.appspot.com/o/logo%20encaixa%20ai.jpg?alt=media&token=3970223b-db85-41e8-988b-b1bf9372ebd0",
@@ -61,7 +142,7 @@ const experiencias = [
     id: 4,
     cargo: "Desenvolvedor web freelancer",
     empresa: "Freelance",
-    periodo: "mar de 2022 - o momento · 3 anos 5 meses",
+    periodo: "mar de 2022 - o momento",
     tipo: "Freelance",
     localizacao: "Remota",
     logo: "https://cdn-icons-png.flaticon.com/512/9495/9495859.png", // Você pode adicionar um ícone genérico
@@ -97,6 +178,9 @@ const experiencias = [
     conclusao: "Essa experiência foi fundamental para o meu crescimento técnico e profissional, especialmente em contextos que exigem escalabilidade, colaboração em equipe e inovação constante."
   }
 ];
+
+// Processa as experiências para calcular automaticamente as durações
+const experiencias = processarExperiencias(experienciasBase);
 
 const ExperienceCard = ({ experiencia, index }: { experiencia: any; index: number }) => {
   return (
@@ -177,6 +261,48 @@ const ExperienceCard = ({ experiencia, index }: { experiencia: any; index: numbe
             <p className="text-gray-600 dark:text-gray-400 mt-4 text-sm italic">
               {experiencia.conclusao}
             </p>
+          )}
+          
+          {experiencia.cargoAnterior && (
+            <div className="mt-6 pt-6 border-t border-gray-200 dark:border-gray-700">
+              <div className="mb-3">
+                <h4 className="text-lg font-semibold text-gray-800 dark:text-gray-200 mb-1">
+                  {experiencia.cargoAnterior.cargo}
+                </h4>
+                <div className="flex items-center gap-1 mb-2">
+                  <Calendar className="w-4 h-4 text-gray-500" />
+                  <span className="text-sm text-gray-600 dark:text-gray-400">
+                    {experiencia.cargoAnterior.periodo}
+                  </span>
+                </div>
+              </div>
+              
+              <p className="text-gray-700 dark:text-gray-300 mb-3 leading-relaxed text-sm">
+                {experiencia.cargoAnterior.descricao}
+              </p>
+              
+              {experiencia.cargoAnterior.detalhes && (
+                <p className="text-gray-600 dark:text-gray-400 mb-3 text-sm leading-relaxed">
+                  {experiencia.cargoAnterior.detalhes}
+                </p>
+              )}
+              
+              {experiencia.cargoAnterior.responsabilidades && (
+                <div className="space-y-2">
+                  <h5 className="font-semibold text-gray-800 dark:text-gray-200 text-sm">
+                    Principais responsabilidades:
+                  </h5>
+                  <ul className="space-y-1">
+                    {experiencia.cargoAnterior.responsabilidades.map((resp: string, idx: number) => (
+                      <li key={idx} className="text-sm text-gray-600 dark:text-gray-400 flex items-start gap-2">
+                        <span className="w-1.5 h-1.5 bg-gray-400 rounded-full mt-2 flex-shrink-0"></span>
+                        <span>{resp}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              )}
+            </div>
           )}
         </div>
       </div>
